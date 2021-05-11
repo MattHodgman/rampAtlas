@@ -5,6 +5,7 @@ All datasets downloaded from the Human Protein Atlas were modified into Comma Se
 Each dataset was formatted "Gene, Gene Name, Tissue, na, na, Normalized Expression"  
 After processeing, the final files also included ", Ramp Presence, Expression Bin"  
   
+  
 **Extract Ramps Directory**  
 *highGenes.py*  
 input: original dataset csv  
@@ -27,7 +28,8 @@ quartile of expression, labeled Not detected, Low, Medium, and High
 input: output of addExpressionBins.py which is the full CSV after processing  
 output: same CSV but without any isoforms with conflicting ramp presence for the same gene  
   
-**Data Summary Directory**
+   
+**Data Summary Directory**  
 *geneAndRampTotal.py*  
 input:   
 output:   
@@ -45,7 +47,7 @@ input:
 output:   
   
   
-**Z-Test Directory**
+**Z-Test Directory**  
 *pairwiseZTest.py*  
 input:   
 output:   
