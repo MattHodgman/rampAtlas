@@ -1,5 +1,8 @@
 import re
 import os.path
+import sys
+
+covidFile = sys.argv[1]
 
 tissues = []
 with open("../consensus/tissue_list.txt", "r") as tissues_file:
@@ -7,7 +10,7 @@ with open("../consensus/tissue_list.txt", "r") as tissues_file:
         tissues.append(line.strip())
 
 covidGenes = set()
-with open('covid_Nov_4_2020_no_comma.fasta') as covid_fa:
+with open(covidFile) as covid_fa:
     line = covid_fa.readline()
     while line != "":
         covidGenes.add(line)
