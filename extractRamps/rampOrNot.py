@@ -1,5 +1,8 @@
 import re
 import os.path
+import sys
+
+datasetFile = sys.argv[1]
 
 tissues = []
 with open("tissue_list.txt", "r") as tissues_file:
@@ -11,7 +14,7 @@ badGenes = []
 lineDict = {}
 for tissue in tissues:
     lineDict[tissue] = {}
-with open('rna_tissue_consensus.csv') as genes_fa:
+with open(datasetFile) as genes_fa:
     header = genes_fa.readline().rstrip()
     line = genes_fa.readline()
     while line != "":
