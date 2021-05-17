@@ -55,7 +55,7 @@ output: counts of ramps across expression bins (Not detected, low, med, high) fo
 ### **Z-Test Directory**  
 *pairwiseZTest.py*  
 input: output of geneAndRampTotal.py   
-output: 
+output: CSV of "Tissue/Cell-type 1, Tissue/Cell-type 2, z-statistic, p-value"
   
   
 *ZTestSummary.py*  
