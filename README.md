@@ -10,14 +10,18 @@ These files will be reffered to as "Ramp Presence CSV" in the following input/ou
 **Extract Ramps Directory**  
 *highGenes.py*  
 input: original dataset CSV  
-output: files containing all genes in the top expression quartile for every tissue/cell-type  
+output: files containing all genes in the top expression quartile for every tissue/cell-type useful for running tissue-specific ExtRamp  
   
-*rampOrNot.py* and *covidRampOrNot.py*  
-input: *rn it hard codes input so prolly change that* original CSV  
+*rampOrNot.py* 
+input: original dataset CSV  
 output: original CSV with added "Ramp Presence" column  
   
+*covidRampOrNot.py*  
+input: FASTA file of covid genes and sequences  
+output: CSV of "Covid gene, tissue, Ramp Presence" 
+  
 *splitDoubleLines.py*  
-input: *rn it hard codes input so prolly change that* output of rampOrNot.py  
+input: output of rampOrNot.py  
 output: genes represented by multiple isoforms in a single tissue/cell-type are seperated one line per isoform  
   
 *addExpressionBins.py*  
