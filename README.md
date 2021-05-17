@@ -7,7 +7,7 @@ After processeing, the final files also included ", Ramp Presence, Expression Bi
 These files will be reffered to as "Ramp Presence CSV" in the following input/output explanations.
   
   
-**Extract Ramps Directory**  
+### **Extract Ramps Directory**  
 *highGenes.py*  
 input: original dataset CSV  
 output: files containing all genes in the top expression quartile for every tissue/cell-type useful for running tissue-specific ExtRamp  
@@ -34,7 +34,7 @@ input: output of addExpressionBins.py
 output: the input CSV with all isoforms with conflicting ramp presence for the same gene removed. This is the final Ramp Presence CSV  
   
    
-**Data Summary Directory**  
+### **Data Summary Directory**  
 *geneAndRampTotal.py*  
 input: Ramp Presence CSV  
 output: total counts of genes and ramps per tissue and cell type, useful for dataset-wide chi-squared tests and pairwise z-tests  
@@ -52,7 +52,7 @@ input: Ramp Presence CSV
 output: counts of ramps across expression bins (Not detected, low, med, high) for each gene  
   
   
-**Z-Test Directory**  
+### **Z-Test Directory**  
 *pairwiseZTest.py*  
 input: output of geneAndRampTotal.py   
 output: 
