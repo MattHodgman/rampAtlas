@@ -1,9 +1,9 @@
-# rampAtlas
-Code used to retrieve, organize, and analyze data for the Ramp Atlas.  
+# The Ramp Atlas
+The Ramp Atlas is an online repository of tissue and cell type-specific ramp sequences. This repository is intended to make publicly available all code and accompanying scripts that were used to retrieve, organize, and analyze data for the Ramp Atlas.  
   
 All datasets downloaded from the Human Protein Atlas were modified into Comma Seperated Values files (CSVs).  
-Each dataset was formatted "Gene, Gene Name, Tissue, na, na, Normalized Expression"  
-After processeing, the final files also included ", Ramp Presence, Expression Bin"  
+Each dataset was formatted as follows: "Gene accession, Gene Name, Tissue, na, na, Normalized Expression"  
+After processeing, the final files also included "Ramp Presence, Expression Bin"  
 These files will be reffered to as "Ramp Presence CSV" in the following input/output explanations.
   
   
