@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ExtRamp_ASP.Net",
+    "\\ExtRamp_ASP.Net\\ExtRamp_ASP.Net",
+    "\\ExtRamp_ASP.Net\\ExtRamp_ASP.Net\\ExtRamp"
   ],
-  "SelectedNode": "\\extractRamps",
+  "SelectedNode": "\\ExtRamp_ASP.Net\\ExtRamp_ASP.Net\\ExtRamp\\ExtRamp.sln",
   "PreviewInSolutionExplorer": false
 }
