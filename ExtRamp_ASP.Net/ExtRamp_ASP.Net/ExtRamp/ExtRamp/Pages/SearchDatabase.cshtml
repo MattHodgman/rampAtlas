@@ -1,0 +1,688 @@
+﻿@page
+@model ExtRamp.Pages.SearchDatabaseModel
+@{
+    ViewData["Title"] = "SearchDatabase";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-site-verification" content="AftGhXosuD85UGS9qJ10ftW9Oa2Cu_anI3LF2YSg2Cw" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174164598-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-174164598-1');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: "Lato", sans-serif
+        }
+
+        h1 {
+            font-weight: bold;
+        }
+
+        .w3-bar, h1, button {
+            font-family: "Montserrat", sans-serif
+        }
+
+        .fa-anchor, .fa-coffee {
+            font-size: 200px
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            /*font-family: Calibri*/
+        }
+        /* Style the header */
+        header {
+            /*background-color: #224E8A;*/
+            padding: 30px;
+            text-align: center;
+            /*font-size: 35px;
+              color: black;*/
+        }
+
+        /* Create two columns/boxes that floats next to each other */
+        .column {
+            float: left;
+            /*background: #99BACC;*/
+            padding: 20px;
+            height: 120px;
+        }
+
+        /* Style the list inside the menu */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .left {
+            width: 40%;
+            /*background-color: #fffff0;*/
+        }
+
+        .center {
+            /*background-color: #E4EBF0;*/
+            width: 60%;
+        }
+
+        .right {
+            background-color: #E4EBF0;
+            width: 75%;
+        }
+
+
+        /* Clear floats after the columns */
+        section:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .icon {
+            font-size: 180px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        #download {
+            padding-bottom: 15px;
+            transition: height 0.5s;
+            -webkit-transition: height 0.5s;
+            overflow: hidden;
+        }
+
+        /*
+        #download:hover {
+            height: 270px;
+        }
+            */
+
+        .littleFile {
+            margin-right: 5px
+        }
+
+        /* Style the footer
+            footer {
+              background-color: #AAAFB4;
+              padding: 20px;
+              text-align: center;
+              color: white;
+            }*/
+
+        .show_on_mobile {
+            display: none;
+        }
+
+        .hide_on_mobile {
+            display: block;
+        }
+
+        .btn {
+            border-radius: 10px;
+        }
+
+        .tile {
+            width: 100%;
+            height: 50px;
+            /*margin: 0.5%;*/
+            transition: height 0.5s;
+            -webkit-transition: height 0.5s;
+            overflow: hidden;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: small;
+        }
+
+        #tile1.expand {
+            height: 220px;
+            cursor: auto;
+        }
+
+        #tile2.expand {
+            height: 220px;
+            cursor: auto;
+        }
+
+        #tile3.expand {
+            height: 220px;
+            cursor: auto;
+        }
+
+        #tile4.expand {
+            height: 130px;
+            cursor: auto;
+        }
+
+        #tile5.expand {
+            height: 190px;
+            cursor: auto;
+        }
+
+        .icon2 {
+            font-size: 180px;
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            height: 240px;
+            padding-top: 30px;
+        }
+
+        header {
+            width: 100%;
+            height: 404px;
+            background-image: url("/images/dna2.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: block;
+            /*padding: 128px 16px;*/
+        }
+
+        .mobile_show {
+            display: none;
+        }
+
+        .link:hover {
+            color: grey
+        }
+
+        .file_column {
+            display: flex;
+        }
+
+        .collapsible {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: calc(100% - 20px);
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .active2, .collapsible:hover {
+            background-color: #555;
+        }
+
+        .collapsible:after {
+            content: '\002B';
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+
+
+        .active2:after {
+            content: "\2212";
+        }
+
+        .content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #f1f1f1;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        #additional-charts {
+            height: 70px;
+            transition: height 1s;
+            -webkit-transition: height 1s;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        #additional-charts.expand {
+            height: 3000px;
+            cursor: auto;
+        }
+
+
+        
+
+            /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+            @@media (max-width: 930px) {
+
+                h1 {
+                    font-size: 30px;
+                    font-weight: bold;
+                }
+
+                .hide_on_mobile {
+                    display: none;
+                }
+
+                .show_on_mobile {
+                    display: block;
+                }
+
+                .small_button {
+                    font-size: 5px;
+                }
+
+                .small_mobile_text {
+                    font-size: 20px;
+                }
+
+                .tile {
+                    float: left;
+                    width: 100%;
+                    height: 50px;
+                    margin: 0.5%;
+                    transition: height 0.5s;
+                    -webkit-transition: height 0.5s;
+                    overflow: hidden;
+                    border-radius: 25px;
+                }
+
+                #tile1.expand {
+                    height: 450px;
+                }
+
+                #tile2.expand {
+                    height: 430px;
+                }
+
+                #tile3.expand {
+                    height: 450px;
+                }
+
+                #tile4.expand {
+                    height: 120px;
+                }
+
+                #tile5.expand {
+                    height: 220px;
+                }
+                    
+                .mobile_show {
+                    display: block;
+                }
+
+                .mobile_margin {
+                    margin-left: 0px;
+                }
+
+                .center_on_mobile {
+                    text-align: center;
+                }
+
+                .w3-half {
+                    width: 100%
+                }
+
+                .file_column {
+                    display: block;
+                }
+            }
+            /*
+        .buttons-flex {
+            display: -webkit-flex;
+            display: flex;
+            -webkit-justify-content: space-between;
+            justify-content: space-between;
+        }*/
+    </style>
+</head>
+<body>
+
+
+    <header class="w3-container w3-center" style="padding:128px 16px">
+        <h1 class="hide_on_mobile w3-margin w3-jumbo" style="color: white;">SEARCH DATABASE</h1>
+        <h1 class="show_on_mobile w3-margin w3-xxxlarge" style="color: white;">SEARCH DATABASE</h1>
+        <p class="hide_on_mobile w3-xlarge" style="color: white;">Genes, Cells, and Tissues</p>
+        <p class="show_on_mobile w3-large" style="color: white;">Genes, Cells, and Tissues</p>
+        <!--<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
+    </header>
+
+    <!--
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content w3-center">
+
+            <h1>Downloads</h1>
+            <div style="display: flex; align-items: center; justify-content: center; flex-direction: row;" class="">
+
+                <div style="flex: 30%" class="w3-center hide_on_mobile">
+                    <div class="w3-hover-shadow w3-light-grey" id="download" style="margin: 30px; border-radius: 25px; padding-top: 25px; cursor: pointer;" onmouseover="" onclick="window.location='https://ramps.byu.edu/Downloads';">
+                        <i class="fa fa-download icon" aria-hidden="true" style="padding-bottom: 0px;"></i>
+                        <p>View all downloads</p>
+                    </div>
+                </div>
+
+                <div class="w3-center" style="text-align: center; flex: 70%;">
+                    <br />
+
+                    <div id="tile1" class="tile w3-dark-gray w3-margin-bottom w3-center w3-hover-shadow" onmouseover="">
+                        <h3 class="w3-text-white"><b>Gene Expression Correlation</b></h3>
+                        <p style="text-align: center; padding-left: 30px; padding-right: 30px;  padding-bottom: 10px; padding-top: 10px;">
+                            These data explain how ramp sequences correlate with gene expression (not detected, low, medium, high) within tissues and cell types.
+                        </p>
+                        <div class="file_column">
+                            <div style="flex: 50%">
+                                <p style="margin-bottom:2px"><b>Cell:</b></p>
+                                <hr style="width:75%;margin:auto;margin-bottom:5px;" />
+                                @Html.ActionLink("rampCountPerCellByGeneExpression.csv", "DownloadFile1", new { file = "rampCountPerCellByGeneExpression.csv" }, new { @class = "link" })<br />
+                                @Html.ActionLink("rampCountPerGeneByGeneExpression.csv", "DownloadFile1", new { file = "rampCountPerGeneByGeneExpressionCell.csv" }, new { @class = "link" })<br />
+                                @Html.ActionLink("probabilityRampGivenExpressionCell.csv", "DownloadFile1", new { file = "probabilityRampGivenExpressionCell.csv" }, new { @class = "link" })
+                            </div>
+                            <br class="mobile_show" />
+                            <div style="flex: 50%">
+                                <p style="margin-bottom:2px"><b>Tissue:</b></p>
+                                <hr style="width:75%;margin:auto;margin-bottom:5px;" />
+                                @Html.ActionLink("rampCountPerGeneByGeneExpressionTissueConsensus.csv", "DownloadFile1", new { file = "rampCountPerGeneByGeneExpressionTissueConsensus.csv" }, new { @class = "link" })<br />
+                                @Html.ActionLink("rampCountPerTissueByGeneExpressionConsensus.csv", "DownloadFile1", new { file = "rampCountPerTissueByGeneExpressionConsensus.csv" }, new { @class = "link" })<br />
+                                @Html.ActionLink("probabilityRampGivenExpressionTissueConsensus.csv", "DownloadFile1", new { file = "probabilityRampGivenExpressionTissueConsensus.csv" }, new { @class = "link" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="tile2" class="tile w3-dark-gray w3-margin-bottom w3-center w3-hover-shadow" onmouseover="">
+                        <h3 class="w3-text-white"><b>Ramp Percentage Variation</b></h3>
+                        <p style="text-align: center;padding-left: 30px; padding-right: 30px;  padding-bottom: 10px; padding-top: 10px;">
+                            These files contain pairwise chi-squared analyses between every tissue/cell type to test for different use of ramp sequences,
+                            as well as which tissues'/cells' use of ramp sequences are most different from others.
+                        </p>
+                        <div class="file_column">
+                            <div style="flex: 50%">
+                                <p style="margin-bottom:2px"><b>Cell:</b></p>
+                                <hr style="width:75%;margin:auto;margin-bottom:5px;" />
+                                @Html.ActionLink("pairwiseChiTestCell.csv", "DownloadFile1", new { file = "pairwiseChiTestCell.csv" }, new { @class = "link" })<br />
+                                @Html.ActionLink("percentSignificantChiCell.csv", "DownloadFile1", new { file = "percentSignificantChiCell.csv" }, new { @class = "link" })
+                            </div>
+                            <br class="mobile_show" />
+                            <div style="flex: 50%">
+                                <p style="margin-bottom:2px"><b>Tissue:</b></p>
+                                <hr style="width:75%;margin:auto;margin-bottom:5px;" />
+                                @Html.ActionLink("pairwiseChiTestTissueConsensus.csv", "DownloadFile1", new { file = "pairwiseChiTestTissueConsensus.csv" }, new { @class = "link" })<br />
+                                @Html.ActionLink("percentSignificantChiTissueConsensus.csv", "DownloadFile1", new { file = "percentSignificantChiTissueConsensus.csv" }, new { @class = "link" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="tile3" class="tile w3-dark-gray w3-margin-bottom w3-center w3-hover-shadow" onmouseover="">
+                        <h3 class="w3-text-white"><b>Ramp Presence</b></h3>
+                        <p style="text-align: center;padding-left: 30px; padding-right: 30px;  padding-bottom: 10px; padding-top: 10px;">
+                            These files show which genes have ramps after tissue/cell type clustering, as well as the total number of genes and ramps
+                            in each tissue/cell type including a chi-squared test to determine if the percentage of ramps differs across all tissue/cell types.
+                        </p>
+                        <div class="file_column">
+                            <div style="flex: 50%">
+                                <p style="margin-bottom:2px"><b>Cell:</b></p>
+                                <hr style="width:75%;margin:auto;margin-bottom:5px;" />
+                                @Html.ActionLink("rampsInGenesByCellType.csv", "DownloadFile1", new { file = "rampsInGenesByCellType.csv" }, new { @class = "link" })<br />
+                                @Html.ActionLink("totalGenesAndRampsCell.csv", "DownloadFile1", new { file = "totalGenesAndRampsCell.csv" }, new { @class = "link" })
+                            </div>
+                            <br class="mobile_show" />
+                            <div style="flex: 50%">
+                                <p style="margin-bottom:2px"><b>Tissue:</b></p>
+                                <hr style="width:75%;margin:auto;margin-bottom:5px;" />
+                                @Html.ActionLink("rampsInGenesByTissueTypeConsensus.csv", "DownloadFile1", new { file = "rampsInGenesByTissueTypeConsensus.csv" }, new { @class = "link" })<br />
+                                @Html.ActionLink("totalGenesAndRampsTissueConsensus.csv", "DownloadFile1", new { file = "totalGenesAndRampsTissueConsensus.csv" }, new { @class = "link" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="tile5" class="tile w3-dark-gray w3-margin-bottom w3-center w3-hover-shadow" onmouseover="">
+                        <h3 class="w3-text-white"><b>Tissue-Specific Files</b></h3>
+                        <p style="text-align: center;padding-left: 30px; padding-right: 30px;  padding-bottom: 10px; padding-top: 10px;">
+                            These files indicate the expression level and if a ramp sequence is present for each gene, specific to the indicated tissue type.
+                        </p>
+                        <form method="post" enctype="multipart/form-data">
+                            <select style="color: black; margin-top:20px;" id="filename" name="filename">
+                                <option value="adiposetissue.csv" name="filename"> adipose tissue</option>
+                                <option value="adrenalgland.csv" name="filename"> adrenal gland</option>
+                                <option value="amygdala.csv" name="filename"> amygdala</option>
+                                <option value="appendix.csv" name="filename"> appendix</option>
+                                <option value="bonemarrow.csv" name="filename"> bone marrow</option>
+                                <option value="breast.csv" name="filename"> breast</option>
+                                <option value="cerebellum.csv" name="filename"> cerebellum</option>
+                                <option value="cerebralcortex.csv" name="filename"> cerebral cortex</option>
+                                <option value="cervix_uterine.csv" name="filename"> cervix uterine</option>
+                                <option value="colon.csv" name="filename"> colon</option>
+                                <option value="corpuscallosum.csv" name="filename"> corpus callosum</option>
+                                <option value="dendriticcells.csv" name="filename"> dendritic cells</option>
+                                <option value="ductusdeferens.csv" name="filename"> ductus deferens</option>
+                                <option value="duodenum.csv" name="filename"> duodenum</option>
+                                <option value="endometrium.csv" name="filename"> endometrium</option>
+                                <option value="epididymis.csv" name="filename"> epididymis</option>
+                                <option value="esophagus.csv" name="filename"> esophagus</option>
+                                <option value="fallopiantube.csv" name="filename"> fallopian tube</option>
+                                <option value="gallbladder.csv" name="filename"> gallbladder</option>
+                                <option value="granulocytes.csv" name="filename"> granulocytes</option>
+                                <option value="heartmuscle.csv" name="filename"> heart muscle</option>
+                                <option value="hippocampalformation.csv" name="filename"> hippocampal formation</option>
+                                <option value="hypothalamus.csv" name="filename"> hypothalamus</option>
+                                <option value="kidney.csv" name="filename"> kidney</option>
+                                <option value="liver.csv" name="filename"> liver</option>
+                                <option value="lung.csv" name="filename"> lung</option>
+                                <option value="lymphnode.csv" name="filename"> lymph node</option>
+                                <option value="midbrain.csv" name="filename"> midbrain</option>
+                                <option value="monocytes.csv" name="filename"> monocytes</option>
+                                <option value="NK-cells.csv" name="filename"> NK-cells</option>
+                                <option value="olfactoryregion.csv" name="filename"> olfactory region</option>
+                                <option value="ovary.csv" name="filename"> ovary</option>
+                                <option value="pancreas.csv" name="filename"> pancreas</option>
+                                <option value="pituitarygland.csv" name="filename"> pituitary gland</option>
+                                <option value="placenta.csv" name="filename"> placenta</option>
+                                <option value="ponsandmedulla.csv" name="filename"> pons and medulla</option>
+                                <option value="prostate.csv" name="filename"> prostate</option>
+                                <option value="rectum.csv" name="filename"> rectum</option>
+                                <option value="retina.csv" name="filename"> retina</option>
+                                <option value="salivarygland.csv" name="filename"> salivary gland</option>
+                                <option value="seminalvesicle.csv" name="filename"> seminal vesicle</option>
+                                <option value="skeletalmuscle.csv" name="filename"> skeletal muscle</option>
+                                <option value="skin.csv" name="filename"> skin</option>
+                                <option value="smallintestine.csv" name="filename"> small intestine</option>
+                                <option value="smoothmuscle.csv" name="filename"> smooth muscle</option>
+                                <option value="spinalcord.csv" name="filename"> spinal cord</option>
+                                <option value="spleen.csv" name="filename"> spleen</option>
+                                <option value="stomach.csv" name="filename"> stomach</option>
+                                <option value="substantianigra.csv" name="filename"> substantianigra</option>
+                                <option value="T-cells.csv" name="filename"> T-cells</option>
+                                <option value="testis.csv" name="filename"> testis</option>
+                                <option value="thalamus.csv" name="filename"> thalamus</option>
+                                <option value="thymus.csv" name="filename"> thymus</option>
+                                <option value="thyroidgland.csv" name="filename"> thyroid gland</option>
+                                <option value="tongue.csv" name="filename"> tongue</option>
+                                <option value="tonsil.csv" name="filename"> tonsil</option>
+                                <option value="totalPBMC.csv" name="filename"> total PBMC</option>
+                                <option value="urinarybladder.csv" name="filename"> urinary bladder</option>
+                                <option value="vagina.csv" name="filename"> vagina</option>
+                                <option value="allTissuesRSCU.tar.gz" name="filename"> all tissues</option>
+                            </select>
+                            <input type="submit" class="w3-button w3-black w3-small" style="border-radius: 10px; margin-left: 10px; margin-top:-3px" value="Download">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-center w3-container w3-content show_on_mobile">
+                <div class="w3-hover-shadow w3-light-grey" id="download" style="margin-top: 30px; margin-left: 50px; margin-right:50px; border-radius: 25px; padding-top: 25px; cursor: pointer;" onmouseover="" onclick="window.location='https://ramps.byu.edu/Downloads';">
+                    <i class="fa fa-download icon" aria-hidden="true" style="font-size:80px; padding-bottom: 0px;"></i>
+                    <p>View all downloads</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.querySelector('#tile1').addEventListener('click', function () {
+                document.querySelector('#tile1').classList.toggle('expand');
+            });
+            document.querySelector('#tile2').addEventListener('click', function () {
+                document.querySelector('#tile2').classList.toggle('expand');
+            });
+            document.querySelector('#tile3').addEventListener('click', function () {
+                document.querySelector('#tile3').classList.toggle('expand');
+            });
+            document.querySelector('#tile5').addEventListener('click', function () {
+                document.querySelector('#tile5').classList.toggle('expand');
+            });
+        </script>
+    </div>
+    -->
+
+
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+
+            <h1 class="w3-center">Data Query and Visualization</h1>
+            <br />
+            <div>
+                <p class="w3-center w3-text-grey">
+                    We used tissue and cell type-specific gene expression data from the Human Protein Atlas, GTEX, Fantom, and consensus datasets
+                    to identify ramp sequences in genes in specific tissues and cells types.
+                </p>
+                <br />
+                <div class='tableauPlaceholder' id='viz1617644155207' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Qu&#47;QueryRampSequencesConsensus&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='QueryRampSequencesConsensus&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Qu&#47;QueryRampSequencesConsensus&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>
+                <script type='text/javascript'>var divElement = document.getElementById('viz1617644155207'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.8) + 'px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
+                <br />
+
+
+
+                <button class="collapsible">How to Use and Interpret this Chart</button>
+                <div class="content">
+                    <p class="w3-center w3-text-grey" style="margin-top: 10px;">
+                        Search different genes to identify which tissues have a ramp sequence. The color of each cell
+                        represents the normalized expression level of the gene in the tissue. A darker blue indicates higher expression.
+                        When a tissue does not have a ramp sequence in the gene, a "-" is marked in the cell. Data can be
+                        filtered by gene, dataset, ramp presence, and normalized expression. <b>
+                            To clear the currently displayed genes,
+                            on the "Gene" filter check the "All" box, then uncheck it, and then press "Apply."
+                        </b> A ramp presence of
+                        "Uncertain" indicates that the original FASTA gene sequence could not be run through the ExtRamp algorithm.
+                    </p>
+                </div>
+
+                <button class="collapsible">Normalized Expression Calculation</button>
+                <div class="content">
+                    <p class="w3-center w3-text-grey" style="margin-top: 10px;">
+                        From the <a style="color: blue; text-decoration: underline;" href="https://www.proteinatlas.org/about/assays+annotation">Human Protein Atlas website</a>: "For each of the three transcriptomics datasets (HPA, GTEx and FANTOM5), the average TPM value of all individual
+                        samples for each human tissue or human cell type was used to estimate the gene expression level. To be able to
+                        combine the datasets into consensus transcript expression levels, a pipeline was set up to normalize the data
+                        for all samples. In brief, all TPM values per sample were scaled to a sum of 1 million TPM (denoted pTPM) to
+                        compensate for the non-coding transcripts that had been previously removed. Next, all TPM values of all the
+                        samples within each data source (HPA human tissues, HPA blood cells, GTEx, and FANTOM5 respectively) were
+                        <a href="https://genomebiology.biomedcentral.com/articles/10.1186/gb-2010-11-3-r25">TMM normalized</a>,
+                        followed by <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1534033/">Pareto scaling</a> of each gene
+                        within each data source. Tissue data from the three
+                        transcriptomics datasets were subsequently integrated using batch correction through the removeBatchEffect
+                        function of R package <a href="https://bioconductor.org/packages/release/bioc/html/limma.html">Limma</a>, using
+                        the data source as a batch parameter. The blood RNA-seq dataset was not
+                        limma-adjusted. The resulting transcript expression values, denoted Normalized Expression, were calculated
+                        for each gene in every sample."
+                    </p>
+                </div>
+
+                <br />
+                <br />
+                <div class='tableauPlaceholder' id='viz1615520025372' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Al&#47;AllGeneRampPresence&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='AllGeneRampPresence&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Al&#47;AllGeneRampPresence&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>
+                <script type='text/javascript'>var divElement = document.getElementById('viz1615520025372'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.8) + 'px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
+                <br />
+                <button class="collapsible">How to Use and Interpret this Chart</button>
+                <div class="content">
+                    <p class="w3-center w3-text-grey" style="margin-top: 10px;">
+                        Search different genes to identify which cell types have a ramp sequence
+                        as well as information such as gene expression level and measurement reliability.
+                        When a cell type does not have a ramp sequence in the gene, a "-" is marked in the cell.
+                        <b>
+                            To clear the currently displayed genes,
+                            on the "Gene" filter check the "All" box, then uncheck it, and then press "Apply."
+                        </b>
+                        Information can be filtered by gene, tissue, cell type, reliability, ramp presence, or expression level.
+                        Expression levels have been switched from "High," "Medium,"
+                        "Low," and "Not Detected" to 3, 2, 1, and 0 respectively to implement Tableau's color gradient feature.
+                        Reliability scores as defined by the
+                        <a style="color: blue; text-decoration:underline" href="https://www.proteinatlas.org/about/assays+annotation#if_reliability_score">Human Protein Atlas</a>
+                        are based on RNA expression level correlation with antibody staining, independent
+                        antibody validation, knockdown of the target protein, matching the antibody stainings signal with
+                        GFP-tagged proteins, and evidence from literature.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="w3-row-padding w3-padding-64 w3-container w3-light-grey">
+        <div id="additional-charts" class="w3-content w3-center">
+            <h1 style="margin-bottom: 60px;">Additional Charts<i id="arrow" class="fa fa-angle-down" style="padding-left: 40px;"></i></h1>
+            <div>
+                <div class='tableauPlaceholder' id='viz1620241016016' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;zP&#47;zPercentCorrected&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='zPercentCorrected&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;zP&#47;zPercentCorrected&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>
+                <script type='text/javascript'>var divElement = document.getElementById('viz1620241016016'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
+                <br />
+                <div class='tableauPlaceholder' id='viz1620242408692' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ce&#47;CellChiSquarePairs&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='CellChiSquarePairs&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ce&#47;CellChiSquarePairs&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>
+                <script type='text/javascript'>var divElement = document.getElementById('viz1620242408692'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
+                <br />
+                <p class="w3-center w3-text-grey">
+                    Above are two charts showing the number of significant pairs the individual cell-types/tissue-type have.
+                    Each of the cell-types/tissue have been compared using the chi-square test to see if there were significant difference
+                    in the ramp-percentages. The bluer shade signifies that the observed number of ramps exceeds the
+                    number of expected ramps while the redder shade signifies that the observed number of ramps is less than the
+                    number of expected ramps.
+                </p>
+                <br />
+                <br />
+                <div class='tableauPlaceholder' id='viz1619476793026' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sh&#47;SharedRampsTissuesHeatMapBothDatasets&#47;Consensus&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SharedRampsTissuesHeatMapBothDatasets&#47;Consensus' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sh&#47;SharedRampsTissuesHeatMapBothDatasets&#47;Consensus&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>
+                <script type='text/javascript'>var divElement = document.getElementById('viz1619476793026'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1000px'; vizElement.style.height = '950px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1000px'; vizElement.style.height = '950px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '750px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
+                <br />
+                <p class="w3-center w3-text-grey">The percentage of genes present in both tissues where a ramp sequence is also in both tissue types.</p>
+
+                <br />
+                <br />
+                <p class="show_on_mobile w3-center">
+                    This content may be easier to use on a desktop browser than on mobile.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active2");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+
+        document.querySelector("#additional-charts").addEventListener("click", function () {
+            document.querySelector("#additional-charts").classList.toggle("expand");
+            var arrow = document.querySelector("#arrow");
+            arrow.classList.toggle("fa-angle-down");
+            arrow.classList.toggle("fa-angle-up");
+        });
+
+    </script>
+
+</body>
+</html>

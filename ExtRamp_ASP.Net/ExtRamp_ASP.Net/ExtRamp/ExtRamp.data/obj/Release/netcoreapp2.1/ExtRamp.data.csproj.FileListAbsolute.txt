@@ -1,0 +1,12 @@
+C:\Users\matthodg\source\repos\ExtRamp_ASP.Net\ExtRamp_ASP.Net\ExtRamp\ExtRamp.data\bin\Release\netcoreapp2.1\ExtRamp.data.deps.json
+C:\Users\matthodg\source\repos\ExtRamp_ASP.Net\ExtRamp_ASP.Net\ExtRamp\ExtRamp.data\bin\Release\netcoreapp2.1\ExtRamp.data.dll
+C:\Users\matthodg\source\repos\ExtRamp_ASP.Net\ExtRamp_ASP.Net\ExtRamp\ExtRamp.data\bin\Release\netcoreapp2.1\ExtRamp.data.pdb
+C:\Users\matthodg\source\repos\ExtRamp_ASP.Net\ExtRamp_ASP.Net\ExtRamp\ExtRamp.data\bin\Release\netcoreapp2.1\ExtRamp.core.dll
+C:\Users\matthodg\source\repos\ExtRamp_ASP.Net\ExtRamp_ASP.Net\ExtRamp\ExtRamp.data\bin\Release\netcoreapp2.1\ExtRamp.core.pdb
+C:\Users\matthodg\source\repos\ExtRamp_ASP.Net\ExtRamp_ASP.Net\ExtRamp\ExtRamp.data\obj\Release\netcoreapp2.1\ExtRamp.data.csprojAssemblyReference.cache
+C:\Users\matthodg\source\repos\ExtRamp_ASP.Net\ExtRamp_ASP.Net\ExtRamp\ExtRamp.data\obj\Release\netcoreapp2.1\ExtRamp.data.AssemblyInfoInputs.cache
+C:\Users\matthodg\source\repos\ExtRamp_ASP.Net\ExtRamp_ASP.Net\ExtRamp\ExtRamp.data\obj\Release\netcoreapp2.1\ExtRamp.data.AssemblyInfo.cs
+C:\Users\matthodg\source\repos\ExtRamp_ASP.Net\ExtRamp_ASP.Net\ExtRamp\ExtRamp.data\obj\Release\netcoreapp2.1\ExtRamp.data.csproj.CoreCompileInputs.cache
+C:\Users\matthodg\source\repos\ExtRamp_ASP.Net\ExtRamp_ASP.Net\ExtRamp\ExtRamp.data\obj\Release\netcoreapp2.1\ExtRamp.data.csproj.CopyComplete
+C:\Users\matthodg\source\repos\ExtRamp_ASP.Net\ExtRamp_ASP.Net\ExtRamp\ExtRamp.data\obj\Release\netcoreapp2.1\ExtRamp.data.dll
+C:\Users\matthodg\source\repos\ExtRamp_ASP.Net\ExtRamp_ASP.Net\ExtRamp\ExtRamp.data\obj\Release\netcoreapp2.1\ExtRamp.data.pdb

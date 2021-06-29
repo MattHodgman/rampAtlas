@@ -1,0 +1,348 @@
+﻿@page
+@model ExtRamp.Pages.CovidModel
+@{
+    ViewData["Title"] = "Covid";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-site-verification" content="AftGhXosuD85UGS9qJ10ftW9Oa2Cu_anI3LF2YSg2Cw" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174164598-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-174164598-1');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: "Lato", sans-serif
+        }
+
+        h1 {
+            font-weight: bold;
+        }
+
+        .w3-bar, h1, button {
+            font-family: "Montserrat", sans-serif
+        }
+
+        .fa-anchor, .fa-coffee {
+            font-size: 200px
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            /*font-family: Calibri*/
+        }
+        /* Style the header */
+        header {
+            /*background-color: #224E8A;*/
+            padding: 30px;
+            text-align: center;
+            /*font-size: 35px;
+              color: black;*/
+        }
+
+        /* Create two columns/boxes that floats next to each other */
+        .column {
+            float: left;
+            /*background: #99BACC;*/
+            padding: 20px;
+            height: 120px;
+        }
+
+        /* Style the list inside the menu */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .left {
+            width: 40%;
+            /*background-color: #fffff0;*/
+        }
+
+        .center {
+            /*background-color: #E4EBF0;*/
+            width: 60%;
+        }
+
+        .right {
+            background-color: #E4EBF0;
+            width: 75%;
+        }
+
+        
+        /* Clear floats after the columns */
+        section:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .icon {
+            font-size: 180px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        #download {
+            padding-bottom: 15px;
+            transition: height 0.5s;
+            -webkit-transition: height 0.5s;
+            overflow: hidden;
+        }
+
+        /*
+        #download:hover {
+            height: 270px;
+        }
+            */
+
+        .littleFile {
+            margin-right: 5px
+        }
+
+        /* Style the footer
+            footer {
+              background-color: #AAAFB4;
+              padding: 20px;
+              text-align: center;
+              color: white;
+            }*/
+
+        .show_on_mobile {
+            display: none;
+        }
+
+        .hide_on_mobile {
+            display: block;
+        }
+
+        .btn {
+            border-radius: 10px;
+        }
+
+        .tile {
+            width: 100%;
+            height: 50px;
+            /*margin: 0.5%;*/
+            transition: height 0.5s;
+            -webkit-transition: height 0.5s;
+            overflow: hidden;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: small;
+        }
+
+        #tile1.expand {
+            height: 220px;
+            cursor: auto;
+        }
+
+        #tile2.expand {
+            height: 220px;
+            cursor: auto;
+        }
+
+        #tile3.expand {
+            height: 220px;
+            cursor: auto;
+        }
+
+        #tile4.expand {
+            height: 130px;
+            cursor: auto;
+        }
+
+        #tile5.expand {
+            height: 190px;
+            cursor: auto;
+        }
+
+        .icon2 {
+            font-size: 180px;
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            height: 240px;
+            padding-top: 30px;
+        }
+
+        header {
+            width: 100%;
+            height: 404px;
+            background-image: url("/images/covid.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: block;
+            /*padding: 128px 16px;*/
+        }
+
+        .mobile_show {
+            display: none;
+        }
+
+        .link:hover {
+            color: grey
+        }
+
+        .file_column {
+            display: flex;
+        }
+
+        
+
+            /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+            @@media (max-width: 930px) {
+
+                h1 {
+                    font-size: 30px;
+                    font-weight: bold;
+                }
+
+                .hide_on_mobile {
+                    display: none;
+                }
+
+                .show_on_mobile {
+                    display: block;
+                }
+
+                .small_button {
+                    font-size: 5px;
+                }
+
+                .small_mobile_text {
+                    font-size: 20px;
+                }
+
+                .tile {
+                    float: left;
+                    width: 100%;
+                    height: 50px;
+                    margin: 0.5%;
+                    transition: height 0.5s;
+                    -webkit-transition: height 0.5s;
+                    overflow: hidden;
+                    border-radius: 25px;
+                }
+
+                #tile1.expand {
+                    height: 450px;
+                }
+
+                #tile2.expand {
+                    height: 430px;
+                }
+
+                #tile3.expand {
+                    height: 450px;
+                }
+
+                #tile4.expand {
+                    height: 120px;
+                }
+
+                #tile5.expand {
+                    height: 220px;
+                }
+                    
+                .mobile_show {
+                    display: block;
+                }
+
+                .mobile_margin {
+                    margin-left: 0px;
+                }
+
+                .center_on_mobile {
+                    text-align: center;
+                }
+
+                .w3-half {
+                    width: 100%
+                }
+
+                .file_column {
+                    display: block;
+                }
+            }
+            /*
+        .buttons-flex {
+            display: -webkit-flex;
+            display: flex;
+            -webkit-justify-content: space-between;
+            justify-content: space-between;
+        }*/
+    </style>
+</head>
+<body>
+
+
+    <header class="w3-container w3-center" style="padding:128px 16px">
+        <h1 class="hide_on_mobile w3-margin w3-jumbo" style="color: white;">SARS-CoV-2</h1>
+        <h1 class="show_on_mobile w3-margin w3-xxxlarge" style="color: white;">SARS-CoV-2</h1>
+        <p class="hide_on_mobile w3-xlarge" style="color: white;">Ramp Sequence Analyses</p>
+        <p class="show_on_mobile w3-large" style="color: white;">Ramp Sequence Analyses</p>
+        <!--<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
+    </header>
+
+    
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content w3-center">
+            <h1>Ramp Sequences in SARS-CoV-2</h1>
+            <br />
+            <br />
+            <div class='tableauPlaceholder' id='viz1620159217315' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sh&#47;SharedRampsSARS-CoV-2&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SharedRampsSARS-CoV-2&#47;Dashboard1' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sh&#47;SharedRampsSARS-CoV-2&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>
+            <script type='text/javascript'>var divElement = document.getElementById('viz1620159217315'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.minWidth = '1000px'; vizElement.style.maxWidth = '100%'; vizElement.style.minHeight = '950px'; vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px'; } else if (divElement.offsetWidth > 500) { vizElement.style.minWidth = '1000px'; vizElement.style.maxWidth = '100%'; vizElement.style.minHeight = '950px'; vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px'; } else { vizElement.style.width = '100%'; vizElement.style.minHeight = '750px'; vizElement.style.maxHeight = (divElement.offsetWidth * 1.77) + 'px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script><br />
+            <p class="w3-text-grey">The percentage of SARS-CoV-2 genes that have a ramp sequence present in both tissues.</p>
+
+            <br />
+            <br />
+            <br />
+            <div class='tableauPlaceholder' id='viz1617841075420' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;co&#47;covidRamps&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='covidRamps&#47;Dashboard1' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;co&#47;covidRamps&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>
+            <script type='text/javascript'>var divElement = document.getElementById('viz1617841075420'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.minWidth = '1000px'; vizElement.style.maxWidth = '100%'; vizElement.style.minHeight = '850px'; vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px'; } else if (divElement.offsetWidth > 500) { vizElement.style.minWidth = '1000px'; vizElement.style.maxWidth = '100%'; vizElement.style.minHeight = '850px'; vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px'; } else { vizElement.style.width = '100%'; vizElement.style.minHeight = '1000px'; vizElement.style.maxHeight = (divElement.offsetWidth * 1.77) + 'px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
+            <p class="w3-text-grey">Ramp sequences are present in various genes withn th SARS-CoV-2 genome. However, it depends on the specific infected tissue whether the ramp sequence is present.</p>
+
+        </div>
+    </div>
+    <div class="w3-row-padding w3-padding-64 w3-container w3-light-grey">
+        <div class="w3-content w3-center">
+            <h1>Ramp Sequences in Human Entry Factors</h1>
+            <br />
+            <br />
+            <p class="w3-text-grey">
+                We searched for ramp sequences in 26 human genes that code for <a href="https://www.sciencedirect.com/science/article/pii/S2211124720311645">SARS-CoV-2 entry factors</a>.
+                Seven of these entry factors had ramp sequences within a variety of different tissues, potentially
+                influencing tissue-specific susceptability to SARS-CoV-2 infection and proliferation.
+            </p>
+            <br />
+            <br />
+
+            <div class='tableauPlaceholder' id='viz1617837571749' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;hu&#47;humancovidgenesramps&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='humancovidgenesramps&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;hu&#47;humancovidgenesramps&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>
+            <script type='text/javascript'>var divElement = document.getElementById('viz1617837571749'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '877px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
+            <br />
+            <p class="w3-text-grey">
+                Several of the human genes associated with SARS-CoV-2 infection (various factors part of the infection pathway) contain ramp sequences.
+                Here we present the presence of those ramps across 62 tissues in thee human body.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

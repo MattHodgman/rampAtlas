@@ -1,0 +1,558 @@
+﻿@page
+@model ExtRamp.Pages.DownloadsModel
+@{
+    ViewData["Title"] = "Downloads";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Downloads</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: "Lato", sans-serif
+        }
+
+        .thick {
+            background-size: 1px;
+            border-top: 1px solid grey;
+        }
+
+        h1 {
+            font-weight: bold;
+        }
+
+        .w3-bar, h1 {
+            font-family: "Montserrat", sans-serif
+        }
+
+        .fa-anchor, .fa-coffee {
+            font-size: 200px
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            /*font-family: Calibri*/
+        }
+
+        /* Style the header */
+        header {
+            width: 100%;
+            height: 404px;
+            background-image: url("/images/supercomputer_large.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: block;
+            /*padding: 128px 16px;*/
+        }
+
+        /* Create two columns/boxes that floats next to each other */
+        .column {
+            float: left;
+            /*background: #99BACC;*/
+            padding: 20px;
+            height: 120px;
+        }
+
+        /* Style the list inside the menu */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .left {
+            width: 40%;
+            /*background-color: #fffff0;*/
+        }
+
+        .center {
+            /*background-color: #E4EBF0;*/
+            width: 60%;
+        }
+
+        .right {
+            background-color: #E4EBF0;
+            width: 75%;
+        }
+
+
+        /* Clear floats after the columns */
+        section:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .files {
+            flex: 1;
+            display: block;
+            justify-content: center;
+            text-align: right;
+            margin: auto;
+        }
+
+        .show_on_mobile {
+            display: none;
+        }
+
+        .hide_on_mobile {
+            display: block;
+        }
+
+        #flex-buttons {
+            display:flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .download-button {
+            text-decoration: none;
+            border-radius: 10px;
+            margin-left: 10px;
+            margin-top: -3px;
+            margin-bottom: 10px;
+        }
+
+        
+
+        @@media (max-width: 930px) {
+
+            header {
+                background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("/images/supercomputer_large.jpg");
+            }
+
+            .stuff {
+                flex-direction: column;
+            }
+
+            a.link {
+                font-size: 12px;
+            }
+
+            .files {
+                flex: 1;
+                display: block;
+                justify-content: center;
+                text-align: center;
+                margin: auto;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            .hide_on_mobile {
+                display: none;
+            }
+
+            .show_on_mobile {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="w3-container w3-center" style="padding:128px 16px">
+        <h1 class="hide_on_mobile w3-margin w3-jumbo" style="color: white;">DOWNLOADS</h1>
+        <h1 class="show_on_mobile w3-margin w3-xxlarge" style="color: white;">DOWNLOADS</h1>
+        <p class="hide_on_mobile w3-xlarge" style="color: white;">Extensive Ramp Sequence Data</p>
+        <p class="show_on_mobile w3-medium" style="color: white;">Extensive Ramp Sequence Data</p>
+        <!--<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
+    </header>
+
+    <br />
+    <br />
+    <br />
+
+    <div class="w3-content w3-container w3-center">
+        <h2>Download Files by Dataset</h2>
+        <br />
+        <div id="flex-buttons">
+            <div>
+                @Html.ActionLink("HPA", "DownloadFile1", new { file = "allHPAFiles.tar.gz" }, new { @class = "w3-button w3-black w3-large download-button" })
+            </div>
+            <div>
+                @Html.ActionLink("GTEx", "DownloadFile1", new { file = "allGTEXFiles.tar.gz" }, new { @class = "w3-button w3-black w3-large download-button" })
+            </div>
+            <div>
+                @Html.ActionLink("Fantom", "DownloadFile1", new { file = "allFantomFiles.tar.gz" }, new { @class = "w3-button w3-black w3-large download-button" })
+            </div>
+            <div>
+                @Html.ActionLink("Consensus", "DownloadFile1", new { file = "allConsensusFiles.tar.gz" }, new { @class = "w3-button w3-black w3-large download-button" })
+            </div>
+            <div>
+                @Html.ActionLink("All", "DownloadFile1", new { file = "allRampFiles.tar.gz" }, new { @class = "w3-button w3-black w3-large download-button" })
+            </div>
+            <div>
+                @Html.ActionLink("SARS-CoV-2", "DownloadFile1", new { file = "allCovidRampFiles.tar.gz" }, new { @class = "w3-button w3-black w3-large download-button" })
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+    </div>
+    <div class="text-center">
+        <h2>Download Files by Type</h2>
+    </div>
+    <br />
+    <div class="w3-content">
+        <div class="w3-content w3-container" style="display:block">
+            <h3>Gene Expression Correlation</h3>
+            <p><i>These data explain how ramp sequences correlate with gene expression (not detected, low, medium, high) within tissues and cell types. </i></p>
+            <hr class="thick" />
+            <div class="stuff" style="display: flex">
+                <div style="flex:1">
+                    <p><b>Ramp Count per Cell/Tissue by Gene Expression </b></p>
+                    <p>
+                        The number of ramps in every tissue/cell type spread by gene expression (not detected, low, medium, high) including a chi-squared analysis
+                        for each tissue/cell type to test if ramps correlate with expression. These comma-separated files include the tissue/cell type, counts of ramps
+                        by expression, counts of genes with no ramp by expression, total genes, percent of ramps, expected ramp counts by expression, expected ramps
+                        subtracted from the observed counts, and a chi-squared p-value for each tissue/cell type.
+                    </p>
+                </div>
+                <div class="files">
+                    @Html.ActionLink("rampCountPerTissueByGeneExpressionHPA.csv", "DownloadFile1", new { file = "rampCountPerTissueByGeneExpressionHPA.csv" }, new { @class = "link" })<br />
+                    @Html.ActionLink("rampCountPerTissueByGeneExpressionGTEX.csv", "DownloadFile1", new { file = "rampCountPerTissueByGeneExpressionGTEX.csv" }, new { @class = "link" })<br />
+                    @Html.ActionLink("rampCountPerTissueByGeneExpressionFantom.csv", "DownloadFile1", new { file = "rampCountPerTissueByGeneExpressionFantom.csv" }, new { @class = "link" })<br />
+                    @Html.ActionLink("rampCountPerTissueByGeneExpressionConsensus.csv", "DownloadFile1", new { file = "rampCountPerTissueByGeneExpressionConsensus.csv" }, new { @class = "link" })<br />
+                    @Html.ActionLink("rampCountPerCellByGeneExpressionHPA.csv", "DownloadFile1", new { file = "rampCountPerCellByGeneExpressionHPA.csv" }, new { @class = "link" })<br />
+                    <!--@Html.ActionLink("rampCountPerTissueByGeneExpression.csv", "DownloadFile1", new { file = "rampCountPerTissueByGeneExpression.csv" }, new { @class = "link" })-->
+                    <div style="margin-top: 20px;">
+                        @Html.ActionLink("Download All", "DownloadFile1", new { file = "allRampCountPerCellOrTissueByGeneExpressionFiles.tar.gz" }, new { @class = "w3-button w3-black w3-small", style = "text-decoration:none; border-radius: 10px; margin-left: 10px; margin-top:-3px" })
+                    </div>
+                </div>
+            </div>
+            <!--rampCountPerTissueByGeneExpressionFiles.tar.gz-->
+            <hr />
+
+            <div class="stuff" style="display: flex">
+                <div style="flex:1">
+                    <p><b>Ramp Count per Gene by Gene Expression </b></p>
+                    <p>
+                        The number of ramps in every gene—based on either tissue or cell stratified RSCU values—spread by gene expression (not detected, low, medium, high).
+                        These comma-separated files include the gene name, counts of ramps by expression, counts of genes with no ramp by expression, total ramps, and total genes
+                    </p>
+                </div>
+                <div class="files">
+                    @Html.ActionLink("rampCountPerGeneByGeneExpressionHPA.csv", "DownloadFile1", new { file = "rampCountPerGeneByGeneExpressionHPA.csv" }, new { @class = "link" })<br />
+                    @Html.ActionLink("rampCountPerGeneByGeneExpressionGTEX.csv", "DownloadFile1", new { file = "rampCountPerGeneByGeneExpressionGTEX.csv" }, new { @class = "link" })<br />
+                    @Html.ActionLink("rampCountPerGeneByGeneExpressionFantom.csv", "DownloadFile1", new { file = "rampCountPerGeneByGeneExpressionFantom.csv" }, new { @class = "link" })<br />
+                    @Html.ActionLink("rampCountPerGeneByGeneExpressionConsensus.csv", "DownloadFile1", new { file = "rampCountPerGeneByGeneExpressionConsensus.csv" }, new { @class = "link" })<br />
+                    @Html.ActionLink("rampCountPerGeneByGeneExpressionCellHPA.csv", "DownloadFile1", new { file = "rampCountPerGeneByGeneExpressionCellHPA.csv" }, new { @class = "link" })<br />
+                    <div style="margin-top: 20px;">
+                        @Html.ActionLink("Download All", "DownloadFile1", new { file = "allRampCountPerGeneByGeneExpressionFiles.tar.gz" }, new { @class = "w3-button w3-black w3-small", style = "text-decoration:none; border-radius: 10px; margin-left: 10px; margin-top:-3px" })
+                    </div>
+                </div>
+            </div>
+
+            <hr />
+
+            <div class="stuff" style="display: flex">
+                <div style="display:block;flex:1;">
+                    <p><b>Probability of Ramp Given Gene Expression </b></p>
+                    <p>
+                        The probability of a ramp given a gene expression (not detected, low, medium, high) for every gene based on either tissue or cell stratified RSCU values,
+                        calculated using Bayes theorem. These comma-separated files include the gene name, probability of a ramp given each of the four levels of gene expression,
+                        and a column to determine if the ramps correlate with higher expression (P(ramp|high expression) – weighted average (P(ramp|non detected expression) and
+                        P(ramp|low expression)) given that the weighted average < P(ramp|medium expression) < high. Any gene not following this pattern was given a value of -1).
+                    </p>
+                </div>
+                <div class="files">
+                    @Html.ActionLink("probabilityRampGivenExpressionHPA.csv", "DownloadFile1", new { file = "probabilityRampGivenExpressionHPA.csv" }, new { @class = "link" })<br />
+                    @Html.ActionLink("probabilityRampGivenExpressionGTEX.csv", "DownloadFile1", new { file = "probabilityRampGivenExpressionGTEX.csv" }, new { @class = "link" })<br />
+                    @Html.ActionLink("probabilityRampGivenExpressionFantom.csv", "DownloadFile1", new { file = "probabilityRampGivenExpressionFantom.csv" }, new { @class = "link" })<br />
+                    @Html.ActionLink("probabilityRampGivenExpressionConsensus.csv", "DownloadFile1", new { file = "probabilityRampGivenExpressionConsensus.csv" }, new { @class = "link" })<br />
+                    @Html.ActionLink("probabilityRampGivenExpressionCellHPA.csv", "DownloadFile1", new { file = "probabilityRampGivenExpressionCellHPA.csv" }, new { @class = "link" })<br />
+                    <div style="margin-top: 20px;">
+                        @Html.ActionLink("Download All", "DownloadFile1", new { file = "allProbabilityRampGivenExpressionFiles.tar.gz" }, new { @class = "w3-button w3-black w3-small", style = "text-decoration:none; border-radius: 10px; margin-left: 10px; margin-top:-3px" })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br /><br /><br />
+
+        <div class="w3-content w3-container" style="display:block">
+            <h3>Ramp Percentage Variation</h3>
+            <p>
+                <i>
+                    These files contain pairwise chi-squared analyses between every tissue/cell type to test for different use of ramp sequences, as well as which tissues/cells
+                    use of ramp sequences are most different from others.
+                </i>
+            </p>
+            <hr class="thick" />
+            <div class="stuff" style="display: flex">
+                <div class="w3-half" style="display:block">
+                    <p><b>Pairwise Chi-squared Test</b></p>
+                    <p>
+                        Pairwise chi-squared analyses between every tissue/cell type to test for different percentages of ramp sequences.
+                        These comma-separated files include the names of the two tissues/cells being compared, a chi-squared test statistic, and a p-value per comparison.
+                    </p>
+                </div>
+                <div class="files">
+                    @Html.ActionLink("pairwiseChiTestHPA.csv", "DownloadFile1", new { file = "pairwiseChiTestHPA.csv" }, new { @class = "link" })<br />
+                    @Html.ActionLink("pairwiseChiTestGTEX.csv", "DownloadFile1", new { file = "pairwiseChiTestGTEX.csv" }, new { @class = "link" })<br />
+                    @Html.ActionLink("pairwiseChiTestFantom.csv", "DownloadFile1", new { file = "pairwiseChiTestFantom.csv" }, new { @class = "link" })<br />
+                    @Html.ActionLink("pairwiseChiTestConsensus.csv", "DownloadFile1", new { file = "pairwiseChiTestConsensus.csv" }, new { @class = "link" })<br />
+                    @Html.ActionLink("pairwiseChiTestCellHPA.csv", "DownloadFile1", new { file = "pairwiseChiTestCellHPA.csv" }, new { @class = "link" })<br />
+                    <div style="margin-top: 20px;">
+                        @Html.ActionLink("Download All", "DownloadFile1", new { file = "allPairwiseChiTestFiles.tar.gz" }, new { @class = "w3-button w3-black w3-small", style = "text-decoration:none; border-radius: 10px; margin-left: 10px; margin-top:-3px" })
+                    </div>
+                </div>
+            </div>
+
+            <hr />
+
+            <div class="stuff" style="display: flex">
+                <div class="w3-half" style="display:block">
+                    <p><b>Percent Significant Chi-Squared Tests</b></p>
+                    <p>
+                        Which tissues/cells use of ramp sequences are most different from others, computed using the percent of significant pairwise
+                        chi-squared tests confirming different ramp percentages. This comma-separated file includes the name of a tissue/cell type, the
+                        total number of ramps in that tissue/cell type, the total number of genes, the number of pairwise tests in which it significantly
+                        differed from another tissue, and that count of significant tests as a percent of total comparisons.
+                    </p>
+                </div>
+                <div class="files">
+                    @Html.ActionLink("percentSignificantChiHPA.csv", "DownloadFile1", new { file = "percentSignificantChiHPA.csv" }, new { @class = "link" })<br />
+                    @Html.ActionLink("percentSignificantChiGTEX.csv", "DownloadFile1", new { file = "percentSignificantChiGTEX.csv" }, new { @class = "link" })<br />
+                    @Html.ActionLink("percentSignificantChiFantom.csv", "DownloadFile1", new { file = "percentSignificantChiFantom.csv" }, new { @class = "link" })<br />
+                    @Html.ActionLink("percentSignificantChiConsensus.csv", "DownloadFile1", new { file = "percentSignificantChiConsensus.csv" }, new { @class = "link" })<br />
+                    @Html.ActionLink("percentSignificantChiCellHPA.csv", "DownloadFile1", new { file = "percentSignificantChiCellHPA.csv" }, new { @class = "link" })<br />
+                    <div style="margin-top: 20px;">
+                        @Html.ActionLink("Download All", "DownloadFile1", new { file = "allPercentSignificantChiFiles.tar.gz" }, new { @class = "w3-button w3-black w3-small", style = "text-decoration:none; border-radius: 10px; margin-left: 10px; margin-top:-3px" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br /><br /><br />
+
+                    <div class="w3-content w3-container" style="display:block">
+                        <h3>Ramp Presence</h3>
+                        <p>
+                            <i>
+                                The total number of genes and genes with ramps for each tissue/cell type, including a chi squared analysis to determine if
+                                across all tissues/cells there is a difference in ramp percentage.
+                            </i>
+                        </p>
+                        <hr class="thick" />
+                        <div class="stuff" style="display: flex">
+                            <div class="w3-half" style="display:inline-block">
+                                <p><b>Ramps in Genes by Tissue/Cell Type</b></p>
+                                <p>
+                                    All genes and whether of not they have a ramp for any given tissue/cell type. This comma-separated file includes an Ensembl gene identifier,
+                                    the name of a gene, a tissue type, a cell type, an expression level, a reliability score, and whether a ramp is present.
+                                </p>
+                            </div>
+                            <div class="files">
+                                @Html.ActionLink("rampsInGenesByTissueTypeHPA.csv", "DownloadFile1", new { file = "rampsInGenesByTissueTypeHPA.csv" }, new { @class = "link" })<br />
+                                @Html.ActionLink("rampsInGenesByTissueTypeGTEX.csv", "DownloadFile1", new { file = "rampsInGenesByTissueTypeGTEX.csv" }, new { @class = "link" })<br />
+                                @Html.ActionLink("rampsInGenesByTissueTypeFantom.csv", "DownloadFile1", new { file = "rampsInGenesByTissueTypeFantom.csv" }, new { @class = "link" })<br />
+                                @Html.ActionLink("rampsInGenesByTissueTypeConsensus.csv", "DownloadFile1", new { file = "rampsInGenesByTissueTypeConsensus.csv" }, new { @class = "link" })<br />
+                                @Html.ActionLink("rampsInGenesByCellTypeHPA.csv", "DownloadFile1", new { file = "rampsInGenesByCellTypeHPA.csv" }, new { @class = "link" })<br />
+                                <div style="margin-top: 20px;">
+                                    @Html.ActionLink("Download All", "DownloadFile1", new { file = "allRampsInGenesFiles.tar.gz" }, new { @class = "w3-button w3-black w3-small", style = "text-decoration:none; border-radius: 10px; margin-left: 10px; margin-top:-3px" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr />
+
+                        <div class="stuff" style="display: flex">
+                            <div class="w3-half" style="display:block">
+                                <p><b>Total Genes and Ramps</b></p>
+                                <p>
+                                    The total number of genes and ramps for each tissue/cell type, including a chi squared analysis to determine if across all
+                                    tissues/cells there is a difference in ramp percentage. This comma-separated file includes a tissue/cell type, the total number
+                                    of genes, the total ramps, the expected number of ramps based on an even distribution of ramps across all tissues/cells, and
+                                    observed minus expected number of ramps, and a chi-squared test statistic. Along the bottom are several column totals, the
+                                    average percent of ramps across all tissues/cells, and the chi-squared p-value.
+                                </p>
+                            </div>
+                            <div class="files">
+                                @Html.ActionLink("totalGenesAndRampsHPA.csv", "DownloadFile1", new { file = "totalGenesAndRampsHPA.csv" }, new { @class = "link" })<br />
+                                @Html.ActionLink("totalGenesAndRampsGTEX.csv", "DownloadFile1", new { file = "totalGenesAndRampsGTEX.csv" }, new { @class = "link" })<br />
+                                @Html.ActionLink("totalGenesAndRampsFantom.csv", "DownloadFile1", new { file = "totalGenesAndRampsFantom.csv" }, new { @class = "link" })<br />
+                                @Html.ActionLink("totalGenesAndRampsConsensus.csv", "DownloadFile1", new { file = "totalGenesAndRampsConsensus.csv" }, new { @class = "link" })<br />
+                                @Html.ActionLink("totalGenesAndRampsCellHPA.csv", "DownloadFile1", new { file = "totalGenesAndRampsCellHPA.csv" }, new { @class = "link" })<br />
+                                <div style="margin-top: 20px;">
+                                    @Html.ActionLink("Download All", "DownloadFile1", new { file = "allTotalGenesAndRampsFiles.tar.gz" }, new { @class = "w3-button w3-black w3-small", style = "text-decoration:none; border-radius: 10px; margin-left: 10px; margin-top:-3px" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr />
+
+                        <div class="stuff" style="display: flex">
+                            <div class="w3-half" style="display:block">
+                                <p><b>Percentage of Ramps Shared Between Tissues</b></p>
+                                <p>
+                                    Comparisons between every tissue in a dataset of which genes have ramp sequences. Each tissue comparison includes data 
+                                    on the percentage of ramp sequences that are present in both tissues, the number of ramp sequences in that are present 
+                                    in both tissues, the total number of genes with a ramp sequence in at least one of the tissues, and
+                                </p>
+                            </div>
+                            <div class="files">
+                                @Html.ActionLink("sharedGeneInfoHPA.csv", "DownloadFile1", new { file = "sharedGeneInfoHPA.csv" }, new { @class = "link" })<br />
+                                @Html.ActionLink("sharedGeneInfoGTEx.csv", "DownloadFile1", new { file = "sharedGeneInfoGTEx.csv" }, new { @class = "link" })<br />
+                                @Html.ActionLink("sharedGeneInfoFantom.csv", "DownloadFile1", new { file = "sharedGeneInfoFantom.csv" }, new { @class = "link" })<br />
+                                @Html.ActionLink("sharedGeneInfoConsensus.csv", "DownloadFile1", new { file = "sharedGeneInfoConsensus.csv" }, new { @class = "link" })<br />
+                                @Html.ActionLink("sharedGeneInfoCell.csv.csv", "DownloadFile1", new { file = "sharedGeneInfoCell.csv" }, new { @class = "link" })<br />
+                                <div style="margin-top: 20px;">
+                                    @Html.ActionLink("Download All", "DownloadFile1", new { file = "allSharedGeneInfoFiles.tar.gz" }, new { @class = "w3-button w3-black w3-small", style = "text-decoration:none; border-radius: 10px; margin-left: 10px; margin-top:-3px" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        <br /><br /><br />
+
+        <div class="w3-content w3-container" style="display:block">
+            <h3>Tissue-specific Expression Files</h3>
+            <p>
+                <i>
+                    These files indicate the expression level and if a ramp sequence is present for each gene, specific to the indicated tissue type.
+                </i>
+            </p>
+            <hr class="thick" />
+
+            <div>
+                <div class="text-center">
+                    <p><b>Select a tissue to download:</b></p>
+                    <form method="post" enctype="multipart/form-data">
+                        <select style="color: black; margin-top:20px;" id="filename" name="filename">
+                            <option value="adiposetissue.csv" name="filename"> adipose tissue</option>
+                            <option value="adrenalgland.csv" name="filename"> adrenal gland</option>
+                            <option value="amygdala.csv" name="filename"> amygdala</option>
+                            <option value="appendix.csv" name="filename"> appendix</option>
+                            <option value="B-cells.csv" name="filename"> B-cells</option>
+                            <option value="basalganglia.csv" name="filename"> basal ganglia</option>
+                            <option value="bonemarrow.csv" name="filename"> bone marrow</option>
+                            <option value="breast.csv" name="filename"> breast</option>
+                            <option value="cerebellum.csv" name="filename"> cerebellum</option>
+                            <option value="cerebralcortex.csv" name="filename"> cerebral cortex</option>
+                            <option value="cervix_uterine.csv" name="filename"> cervix uterine</option>
+                            <option value="colon.csv" name="filename"> colon</option>
+                            <option value="corpuscallosum.csv" name="filename"> corpus callosum</option>
+                            <option value="dendriticcells.csv" name="filename"> dendritic cells</option>
+                            <option value="ductusdeferens.csv" name="filename"> ductus deferens</option>
+                            <option value="duodenum.csv" name="filename"> duodenum</option>
+                            <option value="endometrium.csv" name="filename"> endometrium</option>
+                            <option value="epididymis.csv" name="filename"> epididymis</option>
+                            <option value="esophagus.csv" name="filename"> esophagus</option>
+                            <option value="fallopiantube.csv" name="filename"> fallopian tube</option>
+                            <option value="gallbladder.csv" name="filename"> gallbladder</option>
+                            <option value="granulocytes.csv" name="filename"> granulocytes</option>
+                            <option value="heartmuscle.csv" name="filename"> heart muscle</option>
+                            <option value="hippocampalformation.csv" name="filename"> hippocampal formation</option>
+                            <option value="hypothalamus.csv" name="filename"> hypothalamus</option>
+                            <option value="kidney.csv" name="filename"> kidney</option>
+                            <option value="liver.csv" name="filename"> liver</option>
+                            <option value="lung.csv" name="filename"> lung</option>
+                            <option value="lymphnode.csv" name="filename"> lymph node</option>
+                            <option value="midbrain.csv" name="filename"> midbrain</option>
+                            <option value="monocytes.csv" name="filename"> monocytes</option>
+                            <option value="NK-cells.csv" name="filename"> NK-cells</option>
+                            <option value="olfactoryregion.csv" name="filename"> olfactory region</option>
+                            <option value="ovary.csv" name="filename"> ovary</option>
+                            <option value="pancreas.csv" name="filename"> pancreas</option>
+                            <option value="parathyroidgland.csv" name="filename"> parathyroid gland</option>
+                            <option value="pituitarygland.csv" name="filename"> pituitary gland</option>
+                            <option value="placenta.csv" name="filename"> placenta</option>
+                            <option value="ponsandmedulla.csv" name="filename"> pons and medulla</option>
+                            <option value="prostate.csv" name="filename"> prostate</option>
+                            <option value="rectum.csv" name="filename"> rectum</option>
+                            <option value="retina.csv" name="filename"> retina</option>
+                            <option value="salivarygland.csv" name="filename"> salivary gland</option>
+                            <option value="seminalvesicle.csv" name="filename"> seminal vesicle</option>
+                            <option value="skeletalmuscle.csv" name="filename"> skeletal muscle</option>
+                            <option value="skin.csv" name="filename"> skin</option>
+                            <option value="smallintestine.csv" name="filename"> small intestine</option>
+                            <option value="smoothmuscle.csv" name="filename"> smooth muscle</option>
+                            <option value="spinalcord.csv" name="filename"> spinal cord</option>
+                            <option value="spleen.csv" name="filename"> spleen</option>
+                            <option value="stomach.csv" name="filename"> stomach</option>
+                            <option value="substantianigra.csv" name="filename"> substantianigra</option>
+                            <option value="T-cells.csv" name="filename"> T-cells</option>
+                            <option value="testis.csv" name="filename"> testis</option>
+                            <option value="thalamus.csv" name="filename"> thalamus</option>
+                            <option value="thymus.csv" name="filename"> thymus</option>
+                            <option value="thyroidgland.csv" name="filename"> thyroid gland</option>
+                            <option value="tongue.csv" name="filename"> tongue</option>
+                            <option value="tonsil.csv" name="filename"> tonsil</option>
+                            <option value="totalPBMC.csv" name="filename"> total PBMC</option>
+                            <option value="urinarybladder.csv" name="filename"> urinary bladder</option>
+                            <option value="vagina.csv" name="filename"> vagina</option>
+                            <option value="allTissuesRSCU.tar.gz" name="filename"> all tissues</option>
+                        </select>
+                        <input type="submit" class="w3-button w3-black w3-small" style="border-radius: 10px; margin-left: 10px; margin-top:-3px" value="Download">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <div class="w3-content w3-container" style="display:block">
+            <h3>Ramp Sequences in SARS-CoV-2 and Human Entry Factors</h3>
+            <p>
+                <i>
+                    Several files that contain information on ramp sequence presence across 62 human tissues (from the consensus dataset)
+                    in both SARS-CoV-2 genome and human genes encoding SARS-CoV-2 entry factors.
+                </i>
+            </p>
+            <hr class="thick" />
+                <div class="stuff" style="display: flex">
+                    <div class="w3-half" style="display:inline-block">
+                        <p>
+                            Ramp sequence presence in seven SARS-CoV-2 genes across 62 tissues (consensus dataset).
+                        </p>
+                    </div>
+                    <div class="files">
+                        @Html.ActionLink("covidRamps.csv", "DownloadFile1", new { file = "covidRamps.csv" }, new { @class = "link" })<br />
+                    </div>
+                </div>
+            <hr />
+
+                <div class="stuff" style="display: flex">
+                    <div class="w3-half" style="display:inline-block">
+                        <p>
+                            Ramp sequence presence in seven Human entry factors for SARS-Cov-2, across 62 tissues (consensus dataset).
+                        </p>
+                    </div>
+                    <div class="files">
+                        @Html.ActionLink("humanEntryFactorRamps.csv", "DownloadFile1", new { file = "humanEntryFactorRamps.csv" }, new { @class = "link" })<br />
+                    </div>
+                </div>
+            <hr />
+
+                <div class="stuff" style="display: flex">
+                    <div class="w3-half" style="display:inline-block">
+                        <p>
+                            The percentages of ramp sequences that are shared between any two tissues (all datasets).
+                        </p>
+                    </div>
+                    <div class="files">
+                        @Html.ActionLink("sharedGeneInfoCovidRamps.csv", "DownloadFile1", new { file = "sharedGeneInfoCovidRamps.csv" }, new { @class = "link" })<br />
+                        <hr />
+                        <div style="margin-top: 20px;">
+                            @Html.ActionLink("Download All", "DownloadFile1", new { file = "allCovidRampFiles.tar.gz" }, new { @class = "w3-button w3-black w3-small", style = "text-decoration:none; border-radius: 10px; margin-left: 10px; margin-top:-3px" })
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <br /><br /><br />
+    </div>
+</body>
+</html>
+
+

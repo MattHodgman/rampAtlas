@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNetZip" Version="1.13.8" />
+    <PackageReference Include="Json.Net" Version="1.0.16" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.10" />
+    <PackageReference Include="System.IO.Compression.ZipFile" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="images\" />
+    <Folder Include="Output_files\" />
+    <Folder Include="Uploads\" />
+    <Folder Include="wwwroot\Data\" />
+    <Folder Include="wwwroot\Genes\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Data\Homo_sapiens_output.csv" />
+    <None Include="wwwroot\Data\Homo_sapiens_output.fasta" />
+    <None Include="wwwroot\Data\S_cerevisiae_output.csv" />
+    <None Include="wwwroot\Data\S_cerevisiae_output.fasta" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ExtRamp.core\ExtRamp.core.csproj" />
+    <ProjectReference Include="..\ExtRamp.data\ExtRamp.data.csproj" />
+  </ItemGroup>
+
+</Project>

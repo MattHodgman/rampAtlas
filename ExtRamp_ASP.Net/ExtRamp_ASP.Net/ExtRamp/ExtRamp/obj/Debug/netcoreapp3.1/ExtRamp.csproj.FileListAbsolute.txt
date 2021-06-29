@@ -1,0 +1,9 @@
+C:\Users\matthodgman\source\repos\ExtRamp ASP.Net\ExtRamp\ExtRamp\obj\Debug\netcoreapp3.1\ExtRamp.csprojAssemblyReference.cache
+C:\Users\matthodgman\source\repos\ExtRamp ASP.Net\ExtRamp\ExtRamp\obj\Debug\netcoreapp3.1\ExtRamp.AssemblyInfoInputs.cache
+C:\Users\matthodgman\source\repos\ExtRamp ASP.Net\ExtRamp\ExtRamp\obj\Debug\netcoreapp3.1\ExtRamp.AssemblyInfo.cs
+C:\Users\matthodgman\source\repos\ExtRamp ASP.Net\ExtRamp\ExtRamp\obj\Debug\netcoreapp3.1\ExtRamp.csproj.CoreCompileInputs.cache
+C:\Users\matthodgman\source\repos\ExtRamp ASP.Net\ExtRamp\ExtRamp\obj\Debug\netcoreapp3.1\ExtRamp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\matthodgman\source\repos\ExtRamp ASP.Net\ExtRamp\ExtRamp\obj\Debug\netcoreapp3.1\ExtRamp.TagHelpers.input.cache
+C:\Users\matthodgman\source\repos\ExtRamp ASP.Net\ExtRamp\ExtRamp\obj\Debug\netcoreapp3.1\ExtRamp.TagHelpers.output.cache
+C:\Users\matthodgman\source\repos\ExtRamp ASP.Net\ExtRamp\ExtRamp\obj\Debug\netcoreapp3.1\ExtRamp.dll
+C:\Users\matthodgman\source\repos\ExtRamp ASP.Net\ExtRamp\ExtRamp\obj\Debug\netcoreapp3.1\ExtRamp.pdb

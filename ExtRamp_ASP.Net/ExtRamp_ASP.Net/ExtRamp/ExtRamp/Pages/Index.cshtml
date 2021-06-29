@@ -1,0 +1,481 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="the Ramp Atlas to run ExtRamp Online to identify ramp sequences in tissues and cell types."/>
+    <meta name="google-site-verification" content="AftGhXosuD85UGS9qJ10ftW9Oa2Cu_anI3LF2YSg2Cw" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174164598-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-174164598-1');
+    </script>
+    <script src="https://kit.fontawesome.com/3aa9d240b2.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="AftGhXosuD85UGS9qJ10ftW9Oa2Cu_anI3LF2YSg2Cw" />
+
+
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <style>
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: "Lato", sans-serif
+        }
+
+        h1 {
+            font-weight: bold;
+            font-weight: bold;
+        }
+
+        .w3-bar, h1, button {
+            font-family: "Montserrat", sans-serif
+        }
+
+        .fa-anchor, .fa-coffee {
+            font-size: 200px
+        }
+
+        .show_on_mobile {
+            display: none;
+        }
+
+        .hide_on_mobile {
+            display: block;
+        }
+
+        img {
+            width: 75%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .tile {
+            float: left;
+            width: 25%;
+            height: 300px;
+            margin: 4.16%;
+            transition: height 0.5s;
+            -webkit-transition: height 0.5s;
+            overflow: hidden;
+            border-radius: 25px;
+        }
+
+        .icon {
+            font-size: 180px;
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            height: 240px;
+            padding-top: 30px;
+        }
+
+        .icon_smaller {
+            font-size: 150px;
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            height: 240px;
+            padding-top: 30px;
+        }
+
+        .w3-hover-shadow:hover {
+            box-shadow: 0 6px 14px 0 rgba(0,0,0,0.5),0 4px 20px 0 rgba(0,0,0,0.5)
+        }
+
+        #tile1:hover {
+            height: 500px;
+        }
+
+        #tile2:hover {
+            height: 500px;
+        }
+
+        #tile3:hover {
+            height: 500px;
+        }
+
+        #tile4:hover {
+            height: 500px;
+        }
+
+        #tile5:hover {
+            height: 500px;
+        }
+
+
+
+        .semi-transparent-button {
+            display: block;
+            box-sizing: border-box;
+            margin: 0 auto;
+            padding: 8px;
+            width: 80%;
+            max-width: 150px;
+            /*background: gray;  fallback color for old browsers */
+            background: rgba(102, 102, 102, 0.7);
+            border-radius: 8px;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: all 0.3s ease-out;
+            border: 1px solid #fff;
+        }
+
+            .semi-transparent-button:hover,
+            .semi-transparent-button:focus,
+            .semi-transparent-button:active {
+                background: #fff;
+                color: #000;
+                transition: all 0.4s ease-in;
+            }
+
+
+
+
+
+
+
+        @@media (max-width: 850px) {
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .hide_on_mobile {
+                display: none;
+            }
+
+            .show_on_mobile {
+                display: block;
+            }
+
+            .small_button {
+                font-size: 5px;
+            }
+
+            .small_mobile_text {
+                font-size: 20px;
+            }
+
+            img {
+                width: 100%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .tile {
+                float: left;
+                width: 25%;
+                height: 150px;
+                margin: 4.16%;
+                border-radius: 25px;
+                cursor: pointer;
+            }
+
+            .icon {
+                font-size: 50px;
+                display: inline-block;
+                text-align: center;
+                width: 100%;
+                height: 55%;
+                padding-top: 20px;
+            }
+
+            .icon_smaller {
+                font-size: 50px;
+                display: inline-block;
+                text-align: center;
+                width: 100%;
+                height: 55%;
+                padding-top: 20px;
+            }
+
+            .w3-hover-shadow:hover {
+            }
+
+            #tile1:hover {
+                height: 150px;
+            }
+
+            #tile2:hover {
+                height: 150px;
+            }
+
+            #tile3:hover {
+                height: 150px;
+            }
+            
+            #tile4:hover {
+                height: 150px;
+            }
+
+            #tile5:hover {
+                height: 150px;
+            }
+
+            .carousel-caption {
+                display: block !important;
+            }
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <!-- Header style="padding:128px 16px"-->
+    <header class="w3-container w3-center" style="padding:0px;">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="~/images/banner3.jpg" alt="ASP.NET" class="img-responsive" style="width: 100%; z-index: 0; height:404px; object-fit: cover;" />
+                    <div class="carousel-caption" role="option">
+                        <p>
+                            <b>Welcome to the Ramp Atlas!</b>
+                        </p>
+                        <a class="semi-transparent-button btn" asp-page="/ExtRamp" style="margin-bottom: 20px;">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="~/images/covid2.jpg" alt="Microsoft Azure" class="img-responsive" style="width: 100%; z-index: 0; height:404px; object-fit: cover;" />
+                    <div class="carousel-caption" role="option">
+                        <p>
+                            <b>Ramp sequences may contribute to SARS-CoV-2 infection</b>
+                        </p>
+                        <a class="semi-transparent-button btn" style="margin-bottom: 20px;" asp-page="/Covid">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="~/images/wetLabDarkPic.jpg" alt="Visual Studio" class="img-responsive" style="width: 100%; z-index: 0; height:404px; object-fit: cover;" />
+                    <div class="carousel-caption" role="option">
+                        <p>
+                            <b>ExtRamp is a powerful, novel algorithm</b>
+                        </p>
+                        <a class="semi-transparent-button btn" style="margin-bottom: 20px;" href="https://academic.oup.com/nar/article/47/3/1123/5289485" target="_blank">
+                            Read The Paper
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="~/images/code.jpg" alt="Microsoft Azure" class="img-responsive" style="width: 100%; z-index: 0; height:404px; object-fit: cover;" />
+                    <div class="carousel-caption" role="option">
+                        <p>
+                            <b>Get the ExtRamp software package from GitHub.</b>
+                        </p>
+                        <a class="semi-transparent-button btn" style="margin-bottom: 20px;" href="https://github.com/ridgelab/ExtRamp" target="_blank">
+                            Download Here
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        @*<h1 class="w3-margin w3-jumbo">START PAGE</h1>
+            <p class="w3-xlarge">Template by w3.css</p>
+            <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>*@
+    </header>
+
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content w3-center">
+            <div class="">
+                <h1>Welcome to the Ramp Atlas</h1>
+                <h5 class="w3-padding-32">
+                    Quickly identify ramp sequences in your human and SARS-CoV-2 genes of interest.
+                </h5>
+
+                <p class="w3-text-grey">
+                    Ramp sequences can have a large affect on gene expression. We present extensive analyses of ramp sequences in human and SARS-CoV-2 genes, across tissues and cell types.
+                    The Ramp Atlas is a website that enables users to quickly calculate ramp sequences
+                    in small fasta files. Users can also download data in convenient CSV files about the prevalence of ramp sequences in genes calculated from
+                    stratified tissue and cell types. Enjoy!
+                </p>
+            </div>
+
+            <!--<div class="hide_on_mobile w3-third w3-center">
+                <img src="~/images/DNAClipArt.png"/>
+                <i class="fa fa-line-chart w3-padding-64 w3-text-grey" style="font-size: 180px;"></i>
+            </div>-->
+        </div>
+    </div>
+
+
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+            <h1 class="w3-center">Pages</h1>
+
+            <div id="tile1" class="tile w3-dark-gray w3-margin-bottom w3-center w3-hover-shadow" onmouseover="" style="cursor: pointer;" onclick="window.location='https://ramps.byu.edu/ExtRampOnline';">
+                <i class="icon fa fa-window-maximize fa-align-center w3-text-white w3-margin-right"></i>
+                <p class="w3-text-white"><b>Try ExtRamp Online</b></p>
+                <p style="text-align: left; padding: 30px;">Run the powerful ExtRamp program from a simple user-friendly interface, allowing you to quickly identify ramp sequences in genes without having to touch a line of code.</p>
+            </div>
+
+            <div id="tile2" class="tile w3-dark-gray w3-margin-bottom w3-center w3-hover-shadow" onmouseover="" style="cursor: pointer;" onclick="window.location = 'https://ramps.byu.edu/SearchDatabase';">
+                <i class="icon fas fa-search fa-align-center w3-text-white w3-margin-right" aria-hidden="true"></i>
+                <p class="w3-text-white"><b>Search the Data</b></p>
+                <p style="text-align: left; padding: 30px;">Whether a gene has a ramp sequence depends on local tRNA abundancies in the specific tissue or cell type. Query genes, tissues, and cell types here to learn more about where ramp sequences are found.</p>
+            </div>
+
+            <div id="tile3" class="tile w3-dark-gray w3-margin-bottom w3-center w3-hover-shadow" onmouseover="" style="cursor: pointer;" onclick="window.location='https://ramps.byu.edu/Covid';">
+                <i class="icon_smaller fa fa-virus fa-align-center w3-text-white w3-margin-right"></i>
+                <p class="w3-text-white"><b>SARS-CoV-2</b></p>
+                <p style="text-align: left; padding: 30px;">Ramp sequences are found in several genes in SARS-CoV-2, potentially affcting tissue-specific infection. Click to learn more about SARS-CoV-2 ramp sequences!</p>
+            </div>
+
+            <!--
+            <div id="tile3" class="tile w3-dark-gray w3-margin-bottom w3-center w3-hover-shadow" onmouseover="" style="cursor: pointer;" onclick="window.location='https://ramps.byu.edu/Contact';">
+                <i class="icon_smaller fa fa-users fa-align-center w3-text-white w3-margin-right"></i>
+                <p class="w3-text-white"><b>Meet our Team</b></p>
+                <p style="text-align: left; padding: 30px;">The Kauwe Lab at Brigham Young University is working hard to investigate and communicate novel research that is important to you. Learn more about what we do!</p>
+            </div>
+                -->
+
+
+            <!--<div class="hide_on_mobile w3-third w3-center">
+        <img src="~/images/DNAClipArt.png"/>
+        <i class="fa fa-line-chart w3-padding-64 w3-text-grey" style="font-size: 180px;"></i>
+    </div>-->
+        </div>
+    </div>
+
+
+
+    <!-- First Grid -->
+    <div class="w3-row-paddin w3-padding-64 w3-container">
+        <div class="w3-content w3-center">
+            <div>
+                <h1>What is a ramp sequence?</h1>
+                <h5 class="w3-padding-32">
+                    A ramp sequence is a segment of rare, slowly translated codons at the beginning of a gene.
+                </h5>
+
+                <p class="w3-text-grey">
+                    This altered initiation of translation increases gene expression by evenly spacing ribosomes and reducing mRNA secondary structure.
+                    The graph below shows the translational efficiency (measured as a Relative Synonymous Codon Usage, or RSCU, value) of codons throughout
+                    the gene. The orange segment is the ramp sequence which has a mean translational efficiency of 0.4531, while the entire gene has a mean
+                    efficiency of 0.7734. A translational efficiency of 1.0 would be the most rapidly translated.
+                </p>
+            </div>
+
+
+            <br />
+            <br />
+            <br />
+            <img src="~/images/rampGraph.png" />
+            <br /><br /><br />
+            <!--<button class="w3-button w3-black w3-padding-large w3-medium w3-margin-top" style="left: 50%; position: absolute; margin: 0; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);" onclick="window.location.href = 'https://academic.oup.com/nar/article/47/3/1123/5289485';">Read the Paper</button>
+            -->
+        </div>
+    </div>
+
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content w3-center">
+            <h1 class="w3-center">Additional Links</h1>
+            <!--
+            <div id="tile1" class="tile w3-dark-gray w3-margin-bottom w3-center w3-hover-shadow" onmouseover="" style="cursor: pointer;" onclick="window.location='https://ramps.byu.edu/ExtRamp';">
+                <i class="icon fa fa-window-maximize fa-align-center w3-text-white w3-margin-right"></i>
+                <p class="w3-text-white"><b>Run ExtRamp Online</b></p>
+                <p style="text-align: left; padding: 30px;">Run the powerful ExtRamp program from a simple user-friendly interface, allowing you to quickly identify ramp sequences in genes without having to touch a line of code.</p>
+            </div>
+                -->
+            <div id="tile4" class="tile w3-dark-gray w3-margin-bottom w3-center w3-hover-shadow" onmouseover="" style="margin-left: 20%; margin-right: 5%; cursor: pointer;" onclick="window.location = 'https://academic.oup.com/nar/article/47/3/1123/5289485';">
+                <i class="icon fa fa-file-text fa-align-center w3-text-white w3-margin-right"></i>
+                <p class="w3-text-white"><b>Read the Paper</b></p>
+                <p style="text-align: left; padding: 30px;">The original ExtRamp paper describes ramp sequences in detail as well as exactly how ExtRamp identifies them. This is a great place to go for a more in-depth understanding.</p>
+            </div>
+
+            <div id="tile5" class="tile w3-dark-gray w3-margin-bottom w3-center w3-hover-shadow" onmouseover="" style="margin-left: 5%; margin-right: 20%; cursor: pointer;" onclick="window.location='https://github.com/ridgelab/ExtRamp';">
+                <i class="icon_smaller fa fa-code fa-align-center w3-text-white w3-margin-right"></i>
+                <p class="w3-text-white"><b>Visit the GitHub</b></p>
+                <p style="text-align: left; padding: 30px;">For full access to the features of ExtRamp, download the python program from our GitHub page. ExtRamp.py can be run from the command line on UNIX machines.</p>
+            </div>
+
+
+
+            <!--<div class="hide_on_mobile w3-third w3-center">
+                <img src="~/images/DNAClipArt.png"/>
+                <i class="fa fa-line-chart w3-padding-64 w3-text-grey" style="font-size: 180px;"></i>
+            </div>-->
+        </div>
+    </div>
+
+
+
+</body>
+</html>
+
+
+
+
+@*<div class="row">
+        <div class="col-md-3">
+            <h2>Application uses</h2>
+            <ul>
+                <li>Sample pages using ASP.NET Core Razor Pages</li>
+                <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h2>How to</h2>
+            <ul>
+                <li><a href="https://go.microsoft.com/fwlink/?linkid=852130">Working with Razor Pages.</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkId=699315">Manage User Secrets using Secret Manager.</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkId=699316">Use logging to log a message.</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkId=699317">Add packages using NuGet.</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkId=699319">Target development, staging or production environment.</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h2>Overview</h2>
+            <ul>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of what is ASP.NET Core</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkId=699320">Fundamentals of ASP.NET Core such as Startup and middleware.</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkId=398602">Working with Data</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkId=398603">Security</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkID=699321">Client side development</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkID=699322">Develop on different platforms</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkID=699323">Read more on the documentation site</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h2>Run &amp; Deploy</h2>
+            <ul>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkID=517851">Run your app</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkID=517853">Run tools such as EF migrations and more</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure App Service</a></li>
+            </ul>
+        </div>
+    </div>*@
