@@ -1,0 +1,35 @@
+C:\Users\Kyle\Desktop\ExtRamp\ExtRamp\ExtRamp.core\bin\Debug\netcoreapp2.1\ExtRamp.core.deps.json
+C:\Users\Kyle\Desktop\ExtRamp\ExtRamp\ExtRamp.core\bin\Debug\netcoreapp2.1\ExtRamp.core.dll
+C:\Users\Kyle\Desktop\ExtRamp\ExtRamp\ExtRamp.core\bin\Debug\netcoreapp2.1\ExtRamp.core.pdb
+C:\Users\Kyle\Desktop\ExtRamp\ExtRamp\ExtRamp.core\obj\Debug\netcoreapp2.1\ExtRamp.core.csproj.CoreCompileInputs.cache
+C:\Users\Kyle\Desktop\ExtRamp\ExtRamp\ExtRamp.core\obj\Debug\netcoreapp2.1\ExtRamp.core.AssemblyInfoInputs.cache
+C:\Users\Kyle\Desktop\ExtRamp\ExtRamp\ExtRamp.core\obj\Debug\netcoreapp2.1\ExtRamp.core.AssemblyInfo.cs
+C:\Users\Kyle\Desktop\ExtRamp\ExtRamp\ExtRamp.core\obj\Debug\netcoreapp2.1\ExtRamp.core.dll
+C:\Users\Kyle\Desktop\ExtRamp\ExtRamp\ExtRamp.core\obj\Debug\netcoreapp2.1\ExtRamp.core.pdb
+C:\Users\matthodgman\source\repos\ExtRamp ASP.Net\ExtRamp\ExtRamp.core\bin\Debug\netcoreapp2.1\ExtRamp.core.deps.json
+C:\Users\matthodgman\source\repos\ExtRamp ASP.Net\ExtRamp\ExtRamp.core\bin\Debug\netcoreapp2.1\ExtRamp.core.dll
+C:\Users\matthodgman\source\repos\ExtRamp ASP.Net\ExtRamp\ExtRamp.core\bin\Debug\netcoreapp2.1\ExtRamp.core.pdb
+C:\Users\matthodgman\source\repos\ExtRamp ASP.Net\ExtRamp\ExtRamp.core\obj\Debug\netcoreapp2.1\ExtRamp.core.csprojAssemblyReference.cache
+C:\Users\matthodgman\source\repos\ExtRamp ASP.Net\ExtRamp\ExtRamp.core\obj\Debug\netcoreapp2.1\ExtRamp.core.csproj.CoreCompileInputs.cache
+C:\Users\matthodgman\source\repos\ExtRamp ASP.Net\ExtRamp\ExtRamp.core\obj\Debug\netcoreapp2.1\ExtRamp.core.AssemblyInfoInputs.cache
+C:\Users\matthodgman\source\repos\ExtRamp ASP.Net\ExtRamp\ExtRamp.core\obj\Debug\netcoreapp2.1\ExtRamp.core.AssemblyInfo.cs
+C:\Users\matthodgman\source\repos\ExtRamp ASP.Net\ExtRamp\ExtRamp.core\obj\Debug\netcoreapp2.1\ExtRamp.core.dll
+C:\Users\matthodgman\source\repos\ExtRamp ASP.Net\ExtRamp\ExtRamp.core\obj\Debug\netcoreapp2.1\ExtRamp.core.pdb
+C:\Users\matthodgman\source\repos\ExtRamp_ASP.Net\ExtRamp\ExtRamp.core\bin\Debug\netcoreapp2.1\ExtRamp.core.deps.json
+C:\Users\matthodgman\source\repos\ExtRamp_ASP.Net\ExtRamp\ExtRamp.core\bin\Debug\netcoreapp2.1\ExtRamp.core.dll
+C:\Users\matthodgman\source\repos\ExtRamp_ASP.Net\ExtRamp\ExtRamp.core\bin\Debug\netcoreapp2.1\ExtRamp.core.pdb
+C:\Users\matthodgman\source\repos\ExtRamp_ASP.Net\ExtRamp\ExtRamp.core\obj\Debug\netcoreapp2.1\ExtRamp.core.csprojAssemblyReference.cache
+C:\Users\matthodgman\source\repos\ExtRamp_ASP.Net\ExtRamp\ExtRamp.core\obj\Debug\netcoreapp2.1\ExtRamp.core.AssemblyInfoInputs.cache
+C:\Users\matthodgman\source\repos\ExtRamp_ASP.Net\ExtRamp\ExtRamp.core\obj\Debug\netcoreapp2.1\ExtRamp.core.AssemblyInfo.cs
+C:\Users\matthodgman\source\repos\ExtRamp_ASP.Net\ExtRamp\ExtRamp.core\obj\Debug\netcoreapp2.1\ExtRamp.core.csproj.CoreCompileInputs.cache
+C:\Users\matthodgman\source\repos\ExtRamp_ASP.Net\ExtRamp\ExtRamp.core\obj\Debug\netcoreapp2.1\ExtRamp.core.dll
+C:\Users\matthodgman\source\repos\ExtRamp_ASP.Net\ExtRamp\ExtRamp.core\obj\Debug\netcoreapp2.1\ExtRamp.core.pdb
+C:\Users\matthodg\source\repos\ExtRamp_ASP.Net\ExtRamp_ASP.Net\ExtRamp\ExtRamp.core\bin\Debug\netcoreapp2.1\ExtRamp.core.deps.json
+C:\Users\matthodg\source\repos\ExtRamp_ASP.Net\ExtRamp_ASP.Net\ExtRamp\ExtRamp.core\bin\Debug\netcoreapp2.1\ExtRamp.core.dll
+C:\Users\matthodg\source\repos\ExtRamp_ASP.Net\ExtRamp_ASP.Net\ExtRamp\ExtRamp.core\bin\Debug\netcoreapp2.1\ExtRamp.core.pdb
+C:\Users\matthodg\source\repos\ExtRamp_ASP.Net\ExtRamp_ASP.Net\ExtRamp\ExtRamp.core\obj\Debug\netcoreapp2.1\ExtRamp.core.csprojAssemblyReference.cache
+C:\Users\matthodg\source\repos\ExtRamp_ASP.Net\ExtRamp_ASP.Net\ExtRamp\ExtRamp.core\obj\Debug\netcoreapp2.1\ExtRamp.core.AssemblyInfoInputs.cache
+C:\Users\matthodg\source\repos\ExtRamp_ASP.Net\ExtRamp_ASP.Net\ExtRamp\ExtRamp.core\obj\Debug\netcoreapp2.1\ExtRamp.core.AssemblyInfo.cs
+C:\Users\matthodg\source\repos\ExtRamp_ASP.Net\ExtRamp_ASP.Net\ExtRamp\ExtRamp.core\obj\Debug\netcoreapp2.1\ExtRamp.core.csproj.CoreCompileInputs.cache
+C:\Users\matthodg\source\repos\ExtRamp_ASP.Net\ExtRamp_ASP.Net\ExtRamp\ExtRamp.core\obj\Debug\netcoreapp2.1\ExtRamp.core.dll
+C:\Users\matthodg\source\repos\ExtRamp_ASP.Net\ExtRamp_ASP.Net\ExtRamp\ExtRamp.core\obj\Debug\netcoreapp2.1\ExtRamp.core.pdb

@@ -1,0 +1,9 @@
+C:\Users\Kyle\Desktop\ExtRamp\ExtRamp\ExtRamp.data\bin\Debug\netcoreapp2.2\ExtRamp.data.deps.json
+C:\Users\Kyle\Desktop\ExtRamp\ExtRamp\ExtRamp.data\bin\Debug\netcoreapp2.2\ExtRamp.data.dll
+C:\Users\Kyle\Desktop\ExtRamp\ExtRamp\ExtRamp.data\bin\Debug\netcoreapp2.2\ExtRamp.data.pdb
+C:\Users\Kyle\Desktop\ExtRamp\ExtRamp\ExtRamp.data\obj\Debug\netcoreapp2.2\ExtRamp.data.csprojAssemblyReference.cache
+C:\Users\Kyle\Desktop\ExtRamp\ExtRamp\ExtRamp.data\obj\Debug\netcoreapp2.2\ExtRamp.data.csproj.CoreCompileInputs.cache
+C:\Users\Kyle\Desktop\ExtRamp\ExtRamp\ExtRamp.data\obj\Debug\netcoreapp2.2\ExtRamp.data.AssemblyInfoInputs.cache
+C:\Users\Kyle\Desktop\ExtRamp\ExtRamp\ExtRamp.data\obj\Debug\netcoreapp2.2\ExtRamp.data.AssemblyInfo.cs
+C:\Users\Kyle\Desktop\ExtRamp\ExtRamp\ExtRamp.data\obj\Debug\netcoreapp2.2\ExtRamp.data.dll
+C:\Users\Kyle\Desktop\ExtRamp\ExtRamp\ExtRamp.data\obj\Debug\netcoreapp2.2\ExtRamp.data.pdb

@@ -1,0 +1,60 @@
+﻿@page
+@model ExtRamp.Pages.APIModel
+@{
+    ViewData["Title"] = "API";
+}
+
+
+<h2>API</h2>
+<table class="table" id="ramps">
+    <thead>
+        <tr>
+            <th>Species</th>
+            <th>Fasta</th>
+            <th>CSV</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ramp in Model.Ramps)
+        {
+            <tr>
+                <td>@ramp.species</td>
+                <td><a href="@ramp.fastaFileName"><i class="glyphicon glyphicon-download-alt"></i></a></td>
+                <td><a href="@ramp.csvFileName"><i class="glyphicon glyphicon-download-alt"></i></a></td>
+            </tr>
+        }
+        </tbody>
+    <tfoot>
+        <tr>
+            <th>Species</th>
+            <th>Fasta</th>
+            <th>CSV</th>
+        </tr>
+    </tfoot>
+</table>
+
+@section Scripts
+    {
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.18/datatables.min.css" />
+
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.18/datatables.min.js"></script>
+    <script>
+        $('#ramps').dataTable();
+    </script>
+}
+
+
+@*<table class="table">
+        @foreach (var ramp in Model.Ramps)
+        {
+            <tr>
+                <td>@ramp.species</td>
+                <td><a href="@ramp.fastaFileName">fasta</a></td>
+                <td><a href="@ramp.csvFileName">csv</a></td>
+
+            </tr>
+        }
+    </table>*@
+
+
+

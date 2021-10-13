@@ -1,0 +1,739 @@
+﻿@page
+@model ExtRamp.Pages.ExtRampModel
+@{
+    ViewData["Title"] = "ExtRamp";
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-site-verification" content="AftGhXosuD85UGS9qJ10ftW9Oa2Cu_anI3LF2YSg2Cw" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174164598-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-174164598-1');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: "Lato", sans-serif
+        }
+
+        h1 {
+            font-weight: bold;
+        }
+
+        .w3-bar, h1, button {
+            font-family: "Montserrat", sans-serif
+        }
+
+        header {
+            width: 100%;
+            height: 404px;
+            background-image: url("/images/code.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: block;
+            /*padding: 128px 16px;*/
+        }
+
+        #myform {
+            text-align: center;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .buttonHolder {
+            /*display: block;
+        text-align: left;*/
+            margin-left: auto;
+            margin-right: auto;
+            width: 38em;
+        }
+
+        /* Container holding the image and the text */
+        .container2 {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .centered2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .cropped {
+            width: 100%; /* width of container */
+            height: 300px; /* height of container */
+            overflow: hidden;
+        }
+
+        .show_on_mobile {
+            display: none;
+        }
+
+        .hide_on_mobile {
+            display: block;
+        }
+
+        .cropped img {
+            margin: 0px 0px 0px 0px;
+        }
+
+        .thick {
+            background-size: 1px;
+            border-top: 1px solid grey;
+        }
+
+        @@media (max-width: 1400px) {
+
+            h1 {
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+            .hide_on_mobile {
+                display: none;
+            }
+
+            .show_on_mobile {
+                display: block;
+            }
+
+            .small_button {
+                font-size: 5px;
+            }
+
+            .small_mobile_text {
+                font-size: 20px;
+            }
+
+            .buttonHolder {
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
+            }
+
+            .GeneHeader {
+                margin-left: 0px !important;
+            }
+
+            .GeneHeaderLabel {
+                margin-left: 0px !important;
+            }
+
+            .fa-info-circle {
+                display: none
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- Header style="padding: 128px 16px;" -->
+    <header class="w3-container w3-center" style="padding: 128px 16px;">
+        <!--<img src="~/images/code.jpg" style="width: 100%; height:404px; object-fit: cover; background-size: cover;" />-->
+        <h1 class="hide_on_mobile w3-margin w3-jumbo" style="color: white;">TRY ExtRamp</h1>
+        <h1 class="show_on_mobile w3-margin w3-xxxlarge" style="color: white;">TRY ExtRamp</h1>
+        <p class="hide_on_mobile w3-xlarge" style="color: white;">Find ramp sequences online</p>
+        <p class="show_on_mobile w3-large" style="color: white;">Find ramp sequences online</p>
+    </header>
+
+    <!-- Second Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content w3-center">
+            <!--<div class="hide_on_mobile w3-third w3-center">
+        <i class="fa fa-code fa-5x w3-padding-64 w3-text-black w3-margin-right" style="font-size: 180px;"></i>
+    </div>-->
+
+
+            <h1>How to run ExtRamp Online</h1>
+            <h5 class="w3-padding-32">
+                Use the following interface to run ExtRamp Online. There are explanations and examples below.
+            </h5>
+
+            <p class="w3-text-grey">
+                ExtRamp Online can be run on small fasta files. The gene sequences or fasta file must contain a unique header for each gene sequence. If your gene(s) are RNA be sure to mark the coordinating check box under "Other Options." If no gene is inserted nor input fasta file is uploaded, ExtRamp Online will run on an example input file. There are a variety of options you can select to adjust how ExtRamp Online calculates
+                ramp sequences and how it outputs the results. The default settings are automatically selected. If you are using non-human gene sequences, download the species' tAI values from <a href="http://tau-tai.azurewebsites.net/" style="color:blue;">here</a> and upload them below.
+            </p>
+            <br />
+
+            <p class="w3-text-grey">
+                Due to resource limitations, if your uploaded fasta file is too big or if you are requesting multiple output options, especially the codon efficiencies CSV file (which can be very large), your request may take several minutes to process or may even timeout.
+                In the case of a connection timeout, we recommend you either request less output files at once, or upload a smaller input fasta file. Using fasta files where every gene has a ramp sequence, we found that the maximum allowed input file size depends on the requested output file (hover over the information icon next to the output file for details). For requests of all output files, the maximum input file size is 10MB.
+                These are general estimates of the "worst case scenario" and could vary based on how many ramp sequences are identified in your input fasta file and current traffic on ExtRamp Online.
+                If the output file is blank, it may mean that either the gene fasta header is improperly formatted, the gene sequence length is not a multiple of three, or that no ramp sequence is found in that gene. You can select a different output option to assess that.
+                If want to run ExtRamp Online on a larger fasta file or want to customize more of ExtRamp Online options, download ExtRamp.py from our <a href="https://github.com/ridgelab/ExtRamp" style="color:blue;">GitHub.</a>
+            </p>
+            <br />
+            <!--<button class="w3-button w3-black w3-padding-large w3-medium w3-margin-top" style="float: right;" href="#howto">More Details</button>-->
+            <p class="w3-text-grey">See example output files<a style="color:blue;" href="#howto"> here.</a></p>
+
+            
+        </div>
+    </div>
+
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+            <h1 class="w3-center">Run ExtRamp Online</h1>
+            <br />
+
+            <form method="post" enctype="multipart/form-data">
+                <div class="center">
+                    <h3>Upload Input Files:</h3>
+                    <hr class="thick" style="text-align:center;" />
+
+                    <div style="text-align: center; margin-top: 15px;">
+
+
+                        <label for="GeneSequence">Gene Header and Sequence:</label>
+                        <textarea class="form-control" id="GeneSequence" asp-for="GeneSequence" name="GeneSequence" value="" type="text" rows="12" placeholder=">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putativeE3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')                                                                                              ATGCCGTCGGTTTCGAAAGCGGCGGCAGCGGCGCTGAGCGGGTCCCCCCCGCAGACTGAGAAGCCGACCCACTACAGGTACCTGAAGGAGTTCAGGACGGAGCAGTGCCCCCTGTTTTCACAGCACAAGTGCGCGCAGCACCGGCCGTTCACCTGCTTCCACTGGCACTTCCTCAACCAGCGGCGCCGCAGGCCCCTCCGCAGGCGCGACGGCACCTTCAACTACAGCCCCGACGTGTACTGCTCCAAGTACAACGAAGCCACCGGCGTGTGCCCCGACGGCGACGAGTGTCCCTACCTGCACCGGACGACGGGGGACACAGAACGCAAGTACCACCTGCGTTACTACAAAACAGGAACCTGCATCCACGAGACAGACGCACGTGGCCACTGCGTGAAGAATGGGCTGCACTGTGCCTTCGCGCACGGCCCCCTGGACCTGCGGCCGCCCGTGTGTGACGTCAGGGAGCTGCAGGCCCAGGAAGCCTTGCAGAACGGCCAGCTGGGCGGCGGGGAAGGGGTCCCGGATCTGCAGCCTGGGGTCTTGGCCAGCCAGGCCATGATTGAGAAGATCCTGAGCGAGGACCCCCGGTGGCAAGATGCCAACTTCGTGCTGGGCAGCTACAAGACGGAGCAGTGCCCGAAGCCGCCACGCCTGTGCCGCCAGGGCTATGCGTGCCCACACTACCACAATAGCCGGGACAGGCGGCGCAACCCCCGGCGGTTCCAGTACAGCTGGCAGCTGGGACGCCGGGTCCTTAGGCTGAGTCCCAGGGCCAACAACCCAAGGGTCGCCCTGCCCAGGGTGCACACAGGACCTTCCTCCACCGCCTGA"></textarea>
+
+
+                        <!--
+        <label class="GeneHeaderLabel" style="margin-left: 3px" for="GeneHeader">Gene Header:</label>
+        <input class="GeneHeader" id="GeneHeader" style="margin-left: 16px" asp-for="GeneHeader" name="GeneHeader" value="" type="text" size="30" />
+        <br />
+
+        <label for="GeneSequence">Gene Sequence:</label>
+        <input id="GeneSequence" asp-for="GeneSequence" name="GeneSequence" value="" type="text" size="30" />
+        -->
+                    </div>
+
+                    <div class="w3-container" style="margin-top:20px;margin-bottom:20px;">
+                        <p>or</p>
+                    </div>
+
+                    <div>
+                        <label for="input">Input fasta file </label><i class="fa fa-info-circle" style="margin-left: 5px" title="A fasta file is required to run ExtRamp. This file shuld have at least one gene sequence, each with a unique header that has a description of the gene. Small fasta files are recommended because they will return the results quicker. If no file is uploaded, ExtRamp will run on the example input file shown below."></i>
+                        <input onmouseover="" style="margin: 0px auto; display: block; width: 200px; cursor: pointer;" type="file" asp-for="Upload_input" id="input" />
+
+                    </div>
+
+
+
+
+                    <br /><br />
+
+
+
+
+                    <label for="tAI">Species' tAI CSV file (default is Homo sapien)</label><i class="fa fa-info-circle" style="margin-left: 5px" title="This is an optional file that provides ExtRamp with tRNA Adaption Index (tAI) values for a specific species. These values represent how efficient each tRNA is translated. If you are using human gene sequences, no file is necessary."></i>
+                    <input onmouseover="" style="margin:0px auto; display:block; width: 200px; cursor: pointer;" type="file" asp-for="Upload_tAI" id="tAI" />
+
+                    <div class="w3-container" style="margin-top:10px;margin-bottom:5px;">
+                        <p>or</p>
+                    </div>
+
+                    <label for="Tissue" style="font-weight: normal">Tissue-specific human RSCU values file: </label>
+                    <select id="Tissue" name="Tissue">
+                        <option name="Tissue" value="none">none</option>
+                        <option name="Tissue" value="adrenal_gland">adrenal gland</option>
+                        <option name="Tissue" value="appendix">appendix</option>
+                        <option name="Tissue" value="bone_marrow">bone marrow</option>
+                        <option name="Tissue" value="breast">breast</option>
+                        <option name="Tissue" value="bronchus">bronchus</option>
+                        <option name="Tissue" value="caudate">caudate</option>
+                        <option name="Tissue" value="cerebellum">cerebellum</option>
+                        <option name="Tissue" value="cerebral_cortex">cerebral cortex</option>
+                        <option name="Tissue" value="cervix_uterine">cervix uterine</option>
+                        <option name="Tissue" value="colon">colon</option>
+                        <option name="Tissue" value="duodenum">duodenum</option>
+                        <option name="Tissue" value="endometrium_1">endometrium 1</option>
+                        <option name="Tissue" value="endometrium_2">endometrium 2</option>
+                        <option name="Tissue" value="epididymis">epididymis</option>
+                        <option name="Tissue" value="esophagus">esophagus</option>
+                        <option name="Tissue" value="fallopian_tube">fallopian tube</option>
+                        <option name="Tissue" value="gallbladder">gallbladder</option>
+                        <option name="Tissue" value="heart_muscle">heart muscle</option>
+                        <option name="Tissue" value="hippocampus">hippocampus</option>
+                        <option name="Tissue" value="kidney">kidney</option>
+                        <option name="Tissue" value="liver">liver</option>
+                        <option name="Tissue" value="lung">lung</option>
+                        <option name="Tissue" value="lymph_node">lymph node</option>
+                        <option name="Tissue" value="nasopharynx">nasopharynx</option>
+                        <option name="Tissue" value="oral_mucosa">oral mucosa</option>
+                        <option name="Tissue" value="pancreas">pancreas</option>
+                        <option name="Tissue" value="parathyroid_gland">parathyroid gland</option>
+                        <option name="Tissue" value="placenta">placenta</option>
+                        <option name="Tissue" value="prostate">prostate</option>
+                        <option name="Tissue" value="rectum">rectum</option>
+                        <option name="Tissue" value="salivary_gland">salivary gland</option>
+                        <option name="Tissue" value="seminal_vesicle">seminal vesicle</option>
+                        <option name="Tissue" value="skin_1">skin 1</option>
+                        <option name="Tissue" value="skin_2">skin 2</option>
+                        <option name="Tissue" value="small_intestine">small intestine</option>
+                        <option name="Tissue" value="soft_tissue_1">soft tissue 1</option>
+                        <option name="Tissue" value="spleen">spleen</option>
+                        <option name="Tissue" value="stomach_1">stomach 1</option>
+                        <option name="Tissue" value="stomach_2">stomach 2</option>
+                        <option name="Tissue" value="testis">testis</option>
+                        <option name="Tissue" value="thyroid_gland">thyroid gland</option>
+                        <option name="Tissue" value="tonsil">tonsil</option>
+                        <option name="Tissue" value="urinary_bladder">urinary bladder</option>
+                        <option name="Tissue" value="vagina">vagina</option>
+                    </select><i class="fa fa-info-circle" style="margin-left: 5px" title="Select the tissue file that correlates with your specific analysis to improve the accuracy of ramp sequence identification. These RSCU values have been calculated using tissue specific highly expressed genes."></i>
+                    @Html.ActionLink("Download", "DownloadFile1", new { file = "allTissueTAIValues.tar.gz" }, new { @class = "w3-button w3-black w3-small", style="text-decoration:none; border-radius: 10px; margin-left: 10px; margin-top:-3px" })
+
+
+                    <div class="w3-container" style="margin-top:10px;margin-bottom:5px;">
+                        <p>or</p>
+                    </div>
+
+                    <label style="font-weight: normal" for="rscu">Compute RSCU values from a Reference Genome (default is GRCh38)</label><i class="fa fa-info-circle" style="margin-left: 5px" title="This is a file that is used to calcualte the relative synonymous codon usage and relative adaptiveness of codons. These values are needed to asses the translation speed of each codon and identify ramp sequences. GRCh38 is the latest human reference genome, ExtRamp specifically uses the longest isoforms of each gene. If you are using genes from a project that used a different reference genome, it may be best to use that same reference here. You can also use a FASTA file of known highly expressed genes."></i>
+                    <input onmouseover="" style="margin:0px auto; display:block; width: 200px; cursor: pointer;" type="file" asp-for="Upload_rscu" id="rscu" />
+                </div>
+
+                <br /><br />
+
+                <h3 class="center">Output Options:<sup><i class="fa fa-info-circle" style="margin-left: 7px; font-size:15px;" title="ExtRamp can output several different files. Select the ones that you would like to download. For more details see the example shown below."></i></sup></h3>
+                <hr class="thick" style="text-align:center;height: 2px;" />
+                <div class="buttonHolder">
+                    <input onmouseover="" style="cursor: pointer;" type="checkbox" id="standard" name="Standard" asp-for="Standard" checked>
+                    <label for="standard" style="font-weight: normal; margin-left:5px;">The ramp sequences.</label><i class="fa fa-info-circle" style="margin-left: 5px" title="Max input file size when requesting this output file: 20MB."></i>
+                    <br />
+
+                    <input onmouseover="" style="cursor: pointer;" type="checkbox" id="speeds" name="Speeds" asp-for="Speeds">
+                    <label for="speeds" style="font-weight: normal; margin-left:5px;">Write codon efficiency (tAI/relative adaptiveness) values for each codon to a list.</label><i class="fa fa-info-circle" style="margin-left: 5px" title="Max input file size when requesting this output file: 20MB."></i>
+                    <br />
+
+                    <input onmouseover="" style="cursor: pointer;" type="checkbox" id="vals" name="Vals" asp-for="Vals">
+                    <label for="vals" style="font-weight: normal; margin-left:5px;">Write codon efficiency (tAI/relative adaptiveness) values for each codon to a CSV.</label><i class="fa fa-info-circle" style="margin-left: 5px" title="Max input file size when requesting this output file: 10MB."></i>
+                    <br />
+
+                    <input onmouseover="" style="cursor: pointer;" type="checkbox" id="noRamps" name="NoRamps" asp-for="NoRamps">
+                    <label for="noRamps" style="font-weight: normal; margin-left:5px;">The gene names that contained no ramp sequence.</label><i class="fa fa-info-circle" style="margin-left: 5px" title="Max input file size when requesting this output file: 20MB."></i>
+                    <br />
+
+                    <input onmouseover="" style="cursor: pointer;" type="checkbox" id="removedSequences" name="RemovedSequences" asp-for="RemovedSequences">
+                    <label for="removedSequences" style="font-weight: normal; margin-left:5px;">The header lines of genes that could not be processed.</label><i class="fa fa-info-circle" style="margin-left: 5px" title="Max input file size when requesting this output file: 20MB."></i>
+                    <br />
+
+                    <input onmouseover="" style="cursor: pointer;" type="checkbox" id="afterRamp" name="AfterRamp" asp-for="AfterRamp">
+                    <label for="afterRamp" style="font-weight: normal; margin-left:5px;">The segment of gene sequences after the ramp sequence.</label><i class="fa fa-info-circle" style="margin-left: 5px" title="Max input file size when requesting this output file: 15MB."></i>
+                    <br />
+                    <br />
+                </div>
+                <br />
+
+                <div class="center">
+                    <h3>Mean Options:<sup><i class="fa fa-info-circle" style="margin-left: 7px; font-size:15px;" title="The type of statistic used to measure the middle (consensus) efficiency. The harmonic mean is used by defualt because ExtRamp finds the mean of translation efficiencies which are rates."></i></sup></h3>
+                    <hr class="thick" style="text-align:center;height: 2px;" />
+                    <input onmouseover="" style="cursor: pointer;" type="radio" id="hmean" value="hmean" name="WhichMean" checked>
+                    <label for="hmean" style="font-weight: normal; margin-left:5px;">Harmonic Mean</label>
+                    <br />
+                    <input onmouseover="" style="cursor: pointer;" type="radio" id="gmean" value="gmean" name="WhichMean">
+                    <label for="gmean" style="font-weight: normal; margin-left:5px;">Geometric Mean</label>
+                    <br />
+                    <input onmouseover="" style="cursor: pointer;" type="radio" id="mean" value="mean" name="WhichMean">
+                    <label for="mean" style="font-weight: normal; margin-left:5px;">Arithmetic Mean</label>
+                    <br />
+                    <input onmouseover="" style="cursor: pointer;" type="radio" id="median" value="median" name="WhichMean">
+                    <label for="median" style="font-weight: normal; margin-left:5px;">Median</label>
+                    <br />
+                    <br />
+                    <br />
+
+                    <h3>Other Options:</h3>
+                    <hr class="thick" style="text-align:center;height: 2px;" />
+                    <label for="ribosomeWindowLength" style="font-weight: normal">Ribosome window length:</label>
+                    <input type="number" id="ribosomeWindowLength" name="ribosomeWindowLength" min="1" max="30" value="9">
+                    <i class="fa fa-info-circle" style="margin-left: 5px" title="The number of codons that the ribosome covers as it is attached to the gene. The default is 9 codons."></i>
+
+                    <br />
+
+                    <label for="bottleNeckLocation" style="font-weight: normal">Bottleneck location:</label>
+                    <input type="number" id="bottleNeckLocation" name="bottleNeckLocation" min="1" max="50" value="8">
+                    <i class="fa fa-info-circle" style="margin-left: 5px" title="Cutoff for where the local minimum must occur in the gene for a ramp to be calculated. The default is in the first 8% of the gene."></i>
+
+                    <br />
+
+                    <label for="minSeqLen" style="font-weight: normal">Minimum Sequence Length:</label>
+                    <input type="number" id="minSeqLen" name="minSeqLen" min="1" max="500" value="100">
+                    <i class="fa fa-info-circle" style="margin-left: 5px" title="Minimum nucleotide sequence length. Default is 100 amino acids * 3 = 300 nucleotides. Genes shorter than this will not be analyzed for ramp sequences."></i>
+                    <br />
+                    <input class="w3-center" onmouseover="" style="cursor: pointer; margin-left:5px;" type="checkbox" id="HasRNA" name="HasRNA" asp-for="HasRNA" />
+                    <label for="HasRNA" style="font-weight: normal">Input gene or fasta file has RNA</label>
+
+
+
+                    <br />
+                    <br />
+                    <br />
+
+                    <input type="submit" value="Run ExtRamp Online" title="If no input fasta file was uploaded, ExtRamp will run on the example fasta file shown below that contains just the UNKL gene." class="w3-button w3-black w3-padding-large w3-medium w3-margin-top" style="border-radius: 10px;" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="howto" class="w3-row-padding w3-padding-64 w3-container w3-content">
+        <h5 class="w3-center">Example Output Files:</h5>
+        <hr class="thick" style="text-align:center;height: 2px;" />
+
+        <style>
+            .collapsible {
+                background-color: #777;
+                color: white;
+                cursor: pointer;
+                padding: 18px;
+                width: 100%;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 15px;
+                margin: 5px;
+            }
+
+                .active2, .collapsible:hover {
+                    background-color: #555;
+                }
+
+                .collapsible:after {
+                    content: '\002B';
+                    color: white;
+                    font-weight: bold;
+                    float: right;
+                    margin-left: 5px;
+                }
+
+
+
+            .active2:after {
+                content: "\2212";
+            }
+
+            .content {
+                padding: 0 18px;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.2s ease-out;
+                /*background-color: #f1f1f1;*/
+            }
+        </style>
+
+        <button class="collapsible">Ramp Sequence</button>
+        <div class="content">
+            <pre><code>>ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')
+ATGCCGTCGGTTTCGAAAGCGGCGGCAGCGGCGCTGAGCGGGTCCCCCCCGCAGACTGAG</code></pre>
+        </div>
+        <button class="collapsible">Codon Efficiencies List</button>
+        <div class="content">
+            <pre><code>>ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')
+0.3660680811986874, 0.23009272328505354, 0.40672907122565455, 0.23009272328505354, 0.8025220729578039, 0.2775451590491787, 0.2775451590491787, 0.5802844771971615, 0.2775451590491787, 0.2775451590491787, 1.0, 1.0, 0.7424507956245506, 0.8938524679160061, 1.0, 0.3660680811986874, 1.0, 0.7380327512259249, 1.0, 1.0, 0.3660680811986874, 1.0, 1.0, 1.0, 0.9848899081927324, 1.0, 1.0, 1.0, 1.0, 1.0, 0.9848899081927324, 0.3242872612579384, 1.0, 1.0, 1.0, 1.0, 1.0, 0.8878768290532996, 0.6482117652168249, 1.0, 1.0, 1.0, 1.0, 0.2775451590491787, 1.0, 1.0, 0.9271275442779531, 0.3660680811986874, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.49082805420770687, 1.0, 1.0, 0.9271275442779531, 0.8399770656635226, 0.8399770656635226, 0.9848899081927324, 1.0, 0.49082805420770687, 0.8399770656635226, 0.9848899081927324, 0.8399770656635226, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.8938524679160061, 1.0, 1.0, 1.0, 0.7596296648073635, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.8744448047827865, 1.0, 1.0, 1.0, 1.0, 0.9271275442779531, 0.3242872612579384, 0.3242872612579384, 0.7424507956245506, 1.0, 0.8339740770689403, 0.7596296648073635, 0.8399770656635226, 1.0, 1.0, 1.0, 1.0, 0.36501255095548085, 1.0, 1.0, 0.8025220729578039, 0.8339740770689403, 0.7506809924420524, 1.0, 1.0, 1.0, 1.0, 1.0, 0.8339740770689403, 1.0, 0.5802844771971615, 0.36501255095548085, 1.0, 1.0, 1.0, 1.0, 1.0, 0.9306781739294473, 0.7424507956245506, 1.0, 1.0, 0.8744448047827865, 1.0, 1.0, 0.2775451590491787, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.9271275442779531, 0.3660680811986874, 1.0, 1.0, 0.8744448047827865, 1.0, 0.5141178051339801, 0.9848899081927324, 1.0, 1.0, 1.0, 1.0, 1.0, 0.7596296648073635, 1.0, 0.334830171068233, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.7424507956245506, 0.7596296648073635, 0.7424507956245506, 0.5141178051339801, 0.3660680811986874, 0.8900790356671991, 1.0, 1.0, 0.8893733176631154, 0.7424507956245506, 0.5141178051339801, 0.334830171068233, 1.0, 1.0, 1.0, 1.0, 1.0, 0.812752385376836, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.9271275442779531, 1.0, 0.37085438941122956, 0.8900790356671991, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.3242872612579384, 1.0, 1.0, 1.0, 0.3660680811986874, 1.0, 0.3660680811986874, 0.8577169503734313, 0.8399770656635226, 1.0, 1.0, 0.8399770656635226, 1.0, 1.0, 0.8299371709967736, 0.2775451590491787, 1.0, 0.8577169503734313, 1.0, 1.0, 1.0, 0.9306781739294473, 1.0, 0.9271275442779531, 1.0, 0.9848899081927324, 0.9271275442779531, 0.8399770656635226, 1.0, 1.0, 0.9271275442779531, 0.9271275442779531, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.7506809924420524, 0.8399770656635226, 0.9271275442779531, 0.5141178051339801, 0.34658008677341773, 0.9848899081927324, 1.0, 0.6381750667737943, 1.0, 0.9848899081927324, 1.0, 1.0, 1.0, 0.8577169503734313, 0.9848899081927324, 0.5141178051339801, 1.0, 1.0, 1.0, 0.9848899081927324, 1.0, 1.0, 0.8339740770689403, 0.7506809924420524, 0.8893733176631154, 0.8938524679160061, 0.8938524679160061, 1.0, 1.0</code></pre>
+        </div>
+        <button class="collapsible">Codon Efficiencies CSV</button>
+        <div class="content">
+            <pre><code>seq,position,speed_value
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",3,0.3573393016248752
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",4,0.37930659346066303
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",5,0.43418850448300816
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",6,0.4368718859430389
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",7,0.5000558965769222
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",8,0.5254951879012496
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",9,0.5486663958113777
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",10,0.6358021712036828
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",11,0.7790636732102469
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",12,0.7790636732102469
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",13,0.6775036400274068
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",14,0.6956698719508382
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",15,0.7021147220891991
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",16,0.7021147220891991
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",17,0.8106627279157929
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",18,0.8106627279157929
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",19,0.8374372250352274
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",20,0.8374372250352274
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",21,0.8374372250352274
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",22,0.9982982443015597
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",23,0.9966022707083032
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",24,0.8097625295144788
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",25,0.8097625295144788
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",26,0.810881844090644
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",27,0.810881844090644
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",28,0.810881844090644
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",29,0.810881844090644
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",30,0.8017595959254302
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",31,0.7647848389256804
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",32,0.7657831870428252
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",33,0.9308109528671545
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",34,0.9308109528671545
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",35,0.9308109528671545
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",36,0.7333764737671652
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",37,0.7333764737671652
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",38,0.7333764737671652
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",39,0.7362370762916516
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",40,0.6709733308349712
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",41,0.6709733308349711
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",42,0.6709733308349711
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",43,0.6709733308349711
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",44,0.6709733308349712
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",45,0.832536831083841
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",46,0.832536831083841
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",47,0.832536831083841
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",48,0.8386344116344576
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",49,0.896648922066532
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",50,0.896648922066532
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",51,0.896648922066532
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",52,0.8896820367044483
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",53,0.8732368366291166
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",54,0.8573885606821863
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",55,0.8561372706215222
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",56,0.8561372706215222
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",57,0.7792405969206674
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",58,0.8408981780506151
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",59,0.8396945241189646
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",60,0.8250301532900425
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",61,0.8310178748771212
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",62,0.8458977932669409
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",63,0.8613202963252661
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",64,0.8625867939868649
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",65,0.8625867939868649
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",66,0.9578177796087839
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",67,0.9776391543818701
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",68,0.9792711479849465
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",69,1.0
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",70,1.0
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",71,1.0
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",72,1.0
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",73,0.986977072806587
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",74,0.986977072806587
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",75,0.986977072806587
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",76,0.986977072806587
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",77,0.9538764891161796
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",78,0.9538764891161797
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",79,0.9538764891161797
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",80,0.9538764891161797
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",81,0.9538764891161797
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",82,0.9660351748371198
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",83,0.9660351748371198
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",84,0.9660351748371198
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",85,0.9660351748371198
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",86,1.0
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",87,1.0
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",88,0.9842968823020071
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",89,0.984296882302007
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",90,0.984296882302007
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",91,0.984296882302007
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",92,0.984296882302007
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",93,0.9759077644677242
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",94,0.7960467444647583
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",95,0.6721657560237673
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",96,0.6551913508246573
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",97,0.6621122022119003
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",98,0.6525550264450893
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",99,0.6379191339337
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",100,0.6294199268929179
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",101,0.6294199268929179
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",102,0.6328989416374943
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",103,0.7415589571037783
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",104,0.8952633154133751
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",105,0.7863249698314186
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",106,0.7863249698314186
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",107,0.8002438812652324
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",108,0.8052817778925172
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",109,0.8046648024109008
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",110,0.7814599302762295
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",111,0.7814599302762295
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",112,0.7814599302762295
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",113,0.7814599302762295
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",114,0.9205020228988039
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",115,0.9205020228988039
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",116,0.9021334102234143
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",117,0.924947702930318
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",118,0.8776639346750097
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",119,0.7717370973335366
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",120,0.7717370973335366
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",121,0.7717370973335366
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",122,0.7717370973335366
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",123,0.7717370973335366
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",124,0.7717370973335366
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",125,0.780071104152929
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",126,0.7573016245231168
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",127,0.8063787998604762
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",128,0.9552744853608199
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",129,0.9409345442610528
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",130,0.9409345442610526
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",131,0.9409345442610526
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",132,0.7396464349521744
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",133,0.7396464349521744
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",134,0.7442020074386183
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",135,0.7661791482982627
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",136,0.7661791482982627
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",137,0.7661791482982627
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",138,0.7756603126661376
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",139,0.7704412500195802
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",140,0.6709733308349712
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",141,0.832536831083841
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",142,0.832536831083841
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",143,0.8216240268892296
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",144,0.8216240268892296
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",145,0.7563664120602787
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",146,0.7553924505795475
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",147,0.7553924505795475
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",148,0.7604089558760678
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",149,0.8907359753853917
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",150,0.8907359753853917
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",151,0.8907359753853917
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",152,0.8757545299271169
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",153,0.8757545299271171
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",154,0.7951680962589279
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",155,0.7962474004927771
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",156,0.7962474004927771
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",157,0.7962474004927771
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",158,0.7962474004927771
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",159,0.7962474004927771
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",160,0.7962474004927771
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",161,0.8191805717678037
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",162,0.7941074203105442
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",163,0.9313567754100172
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",164,0.8990818437038556
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",165,0.8215208037309947
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",166,0.7093862232327236
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",167,0.7025476113008595
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",168,0.7025476113008595
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",169,0.7025476113008595
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",170,0.6957916329950024
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",171,0.6957916329950022
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",172,0.66354283220318
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",173,0.5919785511699017
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",174,0.6312168707268279
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",175,0.7184801704920776
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",176,0.7256340544450084
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",177,0.7256340544450084
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",178,0.7256340544450084
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",179,0.7194850893456107
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",180,0.7400065071692083
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",181,0.8023553070866162
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",182,0.9750403707920298
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",183,0.9750403707920298
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",184,0.9750403707920298
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",185,0.9750403707920298
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",186,0.9750403707920298
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",187,0.9750403707920298
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",188,0.9913422502672837
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",189,0.9913422502672837
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",190,0.8352609024059007
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",191,0.8257962534732013
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",192,0.8257962534732013
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",193,0.8257962534732013
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",194,0.8257962534732013
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",195,0.8257962534732013
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",196,0.8257962534732013
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",197,0.8317951407161333
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",198,0.8317951407161333
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",199,0.98646398944436
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",200,1.0
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",201,0.8120042573513644
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",202,0.8120042573513644
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",203,0.8120042573513644
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",204,0.8120042573513644
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",205,0.702279081458996
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",206,0.702279081458996
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",207,0.6186778716468722
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",208,0.6117024341059516
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",209,0.6038831780968295
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",210,0.7020357984800351
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",211,0.7020357984800351
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",212,0.6917560027062134
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",213,0.6917560027062134
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",214,0.7979688698632669
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",215,0.7837300459404358
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",216,0.728459988978014
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",217,0.7383739852855283
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",218,0.7398685951450376
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",219,0.7398685951450377
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",220,0.7398685951450377
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",221,0.7516402333005472
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",222,0.7469934250290493
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",223,0.7469934250290494
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",224,0.7549076178628876
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",225,0.9657718320079565
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",226,0.964184486088036
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",227,0.973285719762838
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",228,0.9536387076106356
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",229,0.9536387076106356
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",230,0.9536387076106356
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",231,0.9532230820256952
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",232,0.9453531669610198
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",233,0.9532230820256954
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",234,0.9532230820256954
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",235,0.9547745123408291
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",236,0.9628027375185313
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",237,0.9828331270244829
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",238,0.9828331270244829
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",239,0.9828331270244829
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",240,0.956355746268213
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",241,0.9451168072986881
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",242,0.9373796324562315
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",243,0.85337886990075
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",244,0.7239587097921448
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",245,0.723066372859612
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",246,0.723066372859612
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",247,0.6915651500087895
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",248,0.6915651500087895
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",249,0.7088190097524406
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",250,0.7196161451308225
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",251,0.7241672958482044
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",252,0.7837681300190553
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",253,0.9217970199167528
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",254,0.9217970199167528
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",255,0.8404446435056284
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",256,0.8874296392571417
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",257,0.8874296392571415
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",258,0.8887741437178339
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",259,0.8874296392571415
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",260,0.8874296392571417
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",261,0.8874296392571415
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",262,0.8845346762787534
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",263,0.8578272219599613
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",264,0.9306239536108915
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",265,0.9193351057654636
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",266,0.9083168521522836
+">ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putative E3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')",267,0.9083168521522837</code></pre>
+        </div>
+        <button class="collapsible">Gene Sequences After Ramp Sequence</button>
+        <div class="content">
+            <pre><code>>ID=cds32799;Parent=rna44403;Dbxref=CCDS:CCDS32359.1,GeneID:64718,Genbank:NP_001032202.1,HGNC:HGNC:14184;Name=NP_001032202.1;Note=isoform 2 is encoded by transcript variant 2;gbkey=CDS;gene=UNKL;product=putativeE3 ubiquitin-protein ligase UNKL isoform 2;protein_id=NP_001032202.1\n')
+AAGCCGACCCACTACAGGTACCTGAAGGAGTTCAGGACGGAGCAGTGCCCCCTGTTTTCACAGCACAAGTGCGCGCAGCACCGGCCGTTCACCTGCTTCCACTGGCACTTCCTCAACCAGCGGCGCCGCAGGCCCCTCCGCAGGCGCGACGGCACCTTCAACTACAGCCCCGACGTGTACTGCTCCAAGTACAACGAAGCCACCGGCGTGTGCCCCGACGGCGACGAGTGTCCCTACCTGCACCGGACGACGGGGGACACAGAACGCAAGTACCACCTGCGTTACTACAAAACAGGAACCTGCATCCACGAGACAGACGCACGTGGCCACTGCGTGAAGAATGGGCTGCACTGTGCCTTCGCGCACGGCCCCCTGGACCTGCGGCCGCCCGTGTGTGACGTCAGGGAGCTGCAGGCCCAGGAAGCCTTGCAGAACGGCCAGCTGGGCGGCGGGGAAGGGGTCCCGGATCTGCAGCCTGGGGTCTTGGCCAGCCAGGCCATGATTGAGAAGATCCTGAGCGAGGACCCCCGGTGGCAAGATGCCAACTTCGTGCTGGGCAGCTACAAGACGGAGCAGTGCCCGAAGCCGCCACGCCTGTGCCGCCAGGGCTATGCGTGCCCACACTACCACAATAGCCGGGACAGGCGGCGCAACCCCCGGCGGTTCCAGTACAGCTGGCAGCTGGGACGCCGGGTCCTTAGGCTGAGTCCCAGGGCCAACAACCCAAGGGTCGCCCTGCCCAGGGTGCACACAGGACCTTCCTCCACCGCCTGA</code></pre>
+        </div>
+
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active2");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            }
+
+        </script>
+    </div>
+</body>
+</html>

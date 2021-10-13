@@ -1,0 +1,161 @@
+﻿@page
+@model ExtRamp.Pages.ContactModel
+@{
+    ViewData["Title"] = "Our Team";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body, h1, h2, h3, h4, h5, h6 {
+        font-family: "Lato", sans-serif
+    }
+
+    h1 {
+        font-weight: bold;
+    }
+
+    .w3-bar, h1, button {
+        font-family: "Montserrat", sans-serif
+    }
+
+    
+
+    #byulogo {
+        width: 50%
+    }
+
+    #labpic {
+        width: 100%;
+    }
+
+    .show_on_mobile {
+        display: none;
+    }
+
+    .hide_on_mobile {
+        display: block;
+    }
+
+    header {
+        width: 100%;
+        height: 404px;
+        background-image: url("/images/lsb.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+        /*padding: 128px 16px;*/
+    }
+
+    @@media (max-width: 600px) {
+
+        h1 {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .hide_on_mobile {
+            display: none;
+        }
+
+        .show_on_mobile {
+            display: block;
+        }
+
+        .small_button {
+            font-size: 5px;
+        }
+
+        .small_mobile_text {
+            font-size: 20px;
+        }
+
+        #byulogo {
+            width: 75%;
+            margin-bottom: 40px;
+        }
+
+        #labpic {
+            width: 75%;
+            margin-top: 40px;
+        }
+
+        .center_on_mobile {
+            text-align: center;
+        }
+
+    }
+</style>
+<body>
+
+    <header class="w3-container w3-center" style="padding:128px 16px">
+
+        <h1 class="hide_on_mobile w3-margin w3-jumbo" style="color: white;">OUR TEAM</h1>
+        <h1 class="show_on_mobile w3-margin w3-xxxlarge" style="color: white;">OUR TEAM</h1>
+        <p class="hide_on_mobile w3-xlarge" style="color: white;">The Makers of the Ramp Atlas </p>
+        <p class="show_on_mobile w3-large" style="color: white;">The Makers of the Ramp Atlas</p>
+
+        <!--<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
+    </header>
+
+
+
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content center_on_mobile">
+            <h1 style="text-align: center">The Kauwe Lab</h1>
+            <br />
+            <br />
+            <div class="w3-twothird">
+
+
+                <h5 class="w3-padding-32">There's more to what we do.</h5>
+
+                <p class="w3-text-grey">
+                    The Kauwe Lab investigates everything from bonefish conservation to polygenic risk scores to rheumatic heart disease in Samoa.
+                    Check out our <a href="https://biology.byu.edu/kauwe-lab" style="color:blue;">website</a> for more information about our lab!
+                </p>
+
+
+
+            </div>
+
+            <div class="w3-third w3-center">
+                <img id="labpic" src="~/images/lab.png" />
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content center_on_mobile">
+            <h1 style="text-align: center">Please reach out.</h1>
+            <br />
+            <br />
+            <div class="w3-half w3-center">
+                <img id="byulogo" src="~/images/byu.png" />
+            </div>
+
+            <div class="w3-half">
+
+                <br />
+                <br />
+                <address>
+                    Life Sciences Building<br />
+                    Provo, Utah<br />
+                    Phone: (801) 422-1458<br /><br />
+                    <strong>Our Lab:</strong> <a href="https://biology.byu.edu/kauwe-lab">The Kauwe Lab</a><br />
+                    <strong>Email:</strong> <a href="mailto:biosecretary@byu.edu">biosecretary@byu.edu</a>
+
+                </address>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+

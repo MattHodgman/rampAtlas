@@ -1,0 +1,998 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20202.20.0415.1946                               -->
+<workbook original-version='18.1' source-build='2020.2.0 (20202.20.0415.1946)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location id='Book1_15901986961610' path='/workbooks' revision='1.3' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='cell_ramp_percentages' inline='true' name='federated.0z6xidc0sg368g1b69h8d1ezzki1' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='cell_ramp_percentages' name='textscan.0asrmjd1fxb17r17kgphj1ynuiha'>
+            <connection class='textscan' directory='C:/Users/benja/Desktop/Spring 2020/KAUWE LAB/RampWebsite/Search Database' filename='cell_ramp_percentages.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0asrmjd1fxb17r17kgphj1ynuiha' name='cell_ramp_percentages.csv' table='[cell_ramp_percentages#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='Cell Type' ordinal='0' />
+            <column datatype='real' name='Frequency' ordinal='1' />
+            <column datatype='integer' name='Gene With Ramps' ordinal='2' />
+            <column datatype='integer' name='Expected Ramps' ordinal='3' />
+            <column datatype='integer' name='Total Genes' ordinal='4' />
+            <column datatype='real' name='Average Ramp Freqeuncy' ordinal='5' />
+            <column datatype='real' name='Chi-Square Test' ordinal='6' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0asrmjd1fxb17r17kgphj1ynuiha' name='cell_ramp_percentages.csv' table='[cell_ramp_percentages#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='Cell Type' ordinal='0' />
+            <column datatype='real' name='Frequency' ordinal='1' />
+            <column datatype='integer' name='Gene With Ramps' ordinal='2' />
+            <column datatype='integer' name='Expected Ramps' ordinal='3' />
+            <column datatype='integer' name='Total Genes' ordinal='4' />
+            <column datatype='real' name='Average Ramp Freqeuncy' ordinal='5' />
+            <column datatype='real' name='Chi-Square Test' ordinal='6' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[cell_ramp_percentages.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Cell Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Cell Type]</local-name>
+            <parent-name>[cell_ramp_percentages.csv]</parent-name>
+            <remote-alias>Cell Type</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cell_ramp_percentages.csv_E369306058A949C6A7CBAA655F316980]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Frequency</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Frequency]</local-name>
+            <parent-name>[cell_ramp_percentages.csv]</parent-name>
+            <remote-alias>Frequency</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cell_ramp_percentages.csv_E369306058A949C6A7CBAA655F316980]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gene With Ramps</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Gene With Ramps]</local-name>
+            <parent-name>[cell_ramp_percentages.csv]</parent-name>
+            <remote-alias>Gene With Ramps</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cell_ramp_percentages.csv_E369306058A949C6A7CBAA655F316980]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Expected Ramps</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Expected Ramps]</local-name>
+            <parent-name>[cell_ramp_percentages.csv]</parent-name>
+            <remote-alias>Expected Ramps</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cell_ramp_percentages.csv_E369306058A949C6A7CBAA655F316980]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total Genes</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total Genes]</local-name>
+            <parent-name>[cell_ramp_percentages.csv]</parent-name>
+            <remote-alias>Total Genes</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cell_ramp_percentages.csv_E369306058A949C6A7CBAA655F316980]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Average Ramp Freqeuncy</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Average Ramp Freqeuncy]</local-name>
+            <parent-name>[cell_ramp_percentages.csv]</parent-name>
+            <remote-alias>Average Ramp Freqeuncy</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cell_ramp_percentages.csv_E369306058A949C6A7CBAA655F316980]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Chi-Square Test</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Chi-Square Test]</local-name>
+            <parent-name>[cell_ramp_percentages.csv]</parent-name>
+            <remote-alias>Chi-Square Test</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cell_ramp_percentages.csv_E369306058A949C6A7CBAA655F316980]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='real' hidden='true' name='[Average Ramp Freqeuncy]' role='measure' type='quantitative' />
+      <column datatype='real' hidden='true' name='[Chi-Square Test]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Expected Ramps]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Gene With Ramps]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Total Genes]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='cell_ramp_percentages.csv' datatype='table' name='[__tableau_internal_object_id__].[cell_ramp_percentages.csv_E369306058A949C6A7CBAA655F316980]' role='measure' type='quantitative' />
+      <column-instance column='[Expected Ramps]' derivation='Sum' name='[sum:Expected Ramps:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Gene With Ramps]' derivation='Sum' name='[sum:Gene With Ramps:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total Genes]' derivation='Sum' name='[sum:Total Genes:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/benja/Documents/My Tableau Repository/Datasources/cell_ramp_percentages.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='05/23/2020 01:51:12 AM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh increment-key='' incremental-updates='false'>
+            <refresh-event add-from-file-path='cell_ramp_percentages' increment-value='%null%' refresh-type='create' rows-inserted='35' timestamp-start='2020-05-23 01:51:12.898' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Cell Type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Cell Type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Cell Type</remote-alias>
+              <ordinal>0</ordinal>
+              <family>cell_ramp_percentages.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>35</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cell_ramp_percentages.csv_E369306058A949C6A7CBAA655F316980]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Frequency</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Frequency]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Frequency</remote-alias>
+              <ordinal>1</ordinal>
+              <family>cell_ramp_percentages.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>35</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cell_ramp_percentages.csv_E369306058A949C6A7CBAA655F316980]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Gene With Ramps</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Gene With Ramps]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Gene With Ramps</remote-alias>
+              <ordinal>2</ordinal>
+              <family>cell_ramp_percentages.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>33</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cell_ramp_percentages.csv_E369306058A949C6A7CBAA655F316980]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Expected Ramps</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Expected Ramps]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Expected Ramps</remote-alias>
+              <ordinal>3</ordinal>
+              <family>cell_ramp_percentages.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>25</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cell_ramp_percentages.csv_E369306058A949C6A7CBAA655F316980]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Total Genes</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Total Genes]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Total Genes</remote-alias>
+              <ordinal>4</ordinal>
+              <family>cell_ramp_percentages.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cell_ramp_percentages.csv_E369306058A949C6A7CBAA655F316980]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0z6xidc0sg368g1b69h8d1ezzki1].[sum:Gene With Ramps:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0z6xidc0sg368g1b69h8d1ezzki1].[sum:Expected Ramps:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0z6xidc0sg368g1b69h8d1ezzki1].[sum:Total Genes:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;South Korea&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='cell_ramp_percentages.csv' id='cell_ramp_percentages.csv_E369306058A949C6A7CBAA655F316980'>
+            <properties context=''>
+              <relation connection='textscan.0asrmjd1fxb17r17kgphj1ynuiha' name='cell_ramp_percentages.csv' table='[cell_ramp_percentages#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='Cell Type' ordinal='0' />
+                  <column datatype='real' name='Frequency' ordinal='1' />
+                  <column datatype='integer' name='Gene With Ramps' ordinal='2' />
+                  <column datatype='integer' name='Expected Ramps' ordinal='3' />
+                  <column datatype='integer' name='Total Genes' ordinal='4' />
+                  <column datatype='real' name='Average Ramp Freqeuncy' ordinal='5' />
+                  <column datatype='real' name='Chi-Square Test' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='gene_ramp_percentages' inline='true' name='federated.1cjcwlx14wj0fa143r5441m8vhp1' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='gene_ramp_percentages' name='textscan.1j3oci20xocqqt1dkwquw0wtcxzl'>
+            <connection class='textscan' directory='C:/Users/benja/Desktop/Spring 2020/KAUWE LAB/RampWebsite/Search Database' filename='gene_ramp_percentages.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1j3oci20xocqqt1dkwquw0wtcxzl' name='gene_ramp_percentages.csv' table='[gene_ramp_percentages#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='Gene' ordinal='0' />
+            <column datatype='real' name='Frequency' ordinal='1' />
+            <column datatype='integer' name='Gene With Ramps' ordinal='2' />
+            <column datatype='real' name='Expected Ramps' ordinal='3' />
+            <column datatype='integer' name='Total Genes' ordinal='4' />
+            <column datatype='real' name='Average Ramp Frequency' ordinal='5' />
+            <column datatype='real' name='Chi-Square Test' ordinal='6' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.1j3oci20xocqqt1dkwquw0wtcxzl' name='gene_ramp_percentages.csv' table='[gene_ramp_percentages#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='Gene' ordinal='0' />
+            <column datatype='real' name='Frequency' ordinal='1' />
+            <column datatype='integer' name='Gene With Ramps' ordinal='2' />
+            <column datatype='real' name='Expected Ramps' ordinal='3' />
+            <column datatype='integer' name='Total Genes' ordinal='4' />
+            <column datatype='real' name='Average Ramp Frequency' ordinal='5' />
+            <column datatype='real' name='Chi-Square Test' ordinal='6' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <refresh append-to-last-path='C:\Users\benja\Desktop\Spring 2020\KAUWE LAB\RampWebsite\Search Database\gene_ramp_percentages.csv' increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[gene_ramp_percentages.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gene</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Gene]</local-name>
+            <parent-name>[gene_ramp_percentages.csv]</parent-name>
+            <remote-alias>Gene</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gene_ramp_percentages.csv_B772CECA93434350AAE8369CD8C7457D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Frequency</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Frequency]</local-name>
+            <parent-name>[gene_ramp_percentages.csv]</parent-name>
+            <remote-alias>Frequency</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gene_ramp_percentages.csv_B772CECA93434350AAE8369CD8C7457D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gene With Ramps</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Gene With Ramps]</local-name>
+            <parent-name>[gene_ramp_percentages.csv]</parent-name>
+            <remote-alias>Gene With Ramps</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gene_ramp_percentages.csv_B772CECA93434350AAE8369CD8C7457D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Expected Ramps</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Expected Ramps]</local-name>
+            <parent-name>[gene_ramp_percentages.csv]</parent-name>
+            <remote-alias>Expected Ramps</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gene_ramp_percentages.csv_B772CECA93434350AAE8369CD8C7457D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total Genes</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total Genes]</local-name>
+            <parent-name>[gene_ramp_percentages.csv]</parent-name>
+            <remote-alias>Total Genes</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gene_ramp_percentages.csv_B772CECA93434350AAE8369CD8C7457D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Average Ramp Frequency</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Average Ramp Frequency]</local-name>
+            <parent-name>[gene_ramp_percentages.csv]</parent-name>
+            <remote-alias>Average Ramp Frequency</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gene_ramp_percentages.csv_B772CECA93434350AAE8369CD8C7457D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Chi-Square Test</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Chi-Square Test]</local-name>
+            <parent-name>[gene_ramp_percentages.csv]</parent-name>
+            <remote-alias>Chi-Square Test</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gene_ramp_percentages.csv_B772CECA93434350AAE8369CD8C7457D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='real' name='[Expected Ramps]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Gene With Ramps]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Total Genes]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='gene_ramp_percentages.csv' datatype='table' name='[__tableau_internal_object_id__].[gene_ramp_percentages.csv_B772CECA93434350AAE8369CD8C7457D]' role='measure' type='quantitative' />
+      <column-instance column='[Expected Ramps]' derivation='Sum' name='[sum:Expected Ramps:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Gene With Ramps]' derivation='Sum' name='[sum:Gene With Ramps:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total Genes]' derivation='Sum' name='[sum:Total Genes:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/benja/Documents/My Tableau Repository/Datasources/gene_ramp_percentages.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='05/23/2020 04:28:33 AM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh append-to-last-path='C:\Users\benja\Desktop\Spring 2020\KAUWE LAB\RampWebsite\Search Database\gene_ramp_percentages.csv' increment-key='' incremental-updates='false'>
+            <refresh-event add-from-file-path='gene_ramp_percentages' increment-value='%null%' refresh-type='create' rows-inserted='1087' timestamp-start='2020-05-23 04:28:33.188' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Gene</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Gene]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Gene</remote-alias>
+              <ordinal>0</ordinal>
+              <family>gene_ramp_percentages.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1087</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gene_ramp_percentages.csv_B772CECA93434350AAE8369CD8C7457D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Frequency</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Frequency]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Frequency</remote-alias>
+              <ordinal>1</ordinal>
+              <family>gene_ramp_percentages.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>247</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gene_ramp_percentages.csv_B772CECA93434350AAE8369CD8C7457D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Gene With Ramps</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Gene With Ramps]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Gene With Ramps</remote-alias>
+              <ordinal>2</ordinal>
+              <family>gene_ramp_percentages.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>65</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gene_ramp_percentages.csv_B772CECA93434350AAE8369CD8C7457D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Expected Ramps</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Expected Ramps]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Expected Ramps</remote-alias>
+              <ordinal>3</ordinal>
+              <family>gene_ramp_percentages.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gene_ramp_percentages.csv_B772CECA93434350AAE8369CD8C7457D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Total Genes</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Total Genes]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Total Genes</remote-alias>
+              <ordinal>4</ordinal>
+              <family>gene_ramp_percentages.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gene_ramp_percentages.csv_B772CECA93434350AAE8369CD8C7457D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Average Ramp Frequency</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Average Ramp Frequency]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Average Ramp Frequency</remote-alias>
+              <ordinal>5</ordinal>
+              <family>gene_ramp_percentages.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gene_ramp_percentages.csv_B772CECA93434350AAE8369CD8C7457D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Chi-Square Test</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Chi-Square Test]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Chi-Square Test</remote-alias>
+              <ordinal>6</ordinal>
+              <family>gene_ramp_percentages.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gene_ramp_percentages.csv_B772CECA93434350AAE8369CD8C7457D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1cjcwlx14wj0fa143r5441m8vhp1].[sum:Expected Ramps:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1cjcwlx14wj0fa143r5441m8vhp1].[sum:Total Genes:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1cjcwlx14wj0fa143r5441m8vhp1].[sum:Gene With Ramps:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;South Korea&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='gene_ramp_percentages.csv' id='gene_ramp_percentages.csv_B772CECA93434350AAE8369CD8C7457D'>
+            <properties context=''>
+              <relation connection='textscan.1j3oci20xocqqt1dkwquw0wtcxzl' name='gene_ramp_percentages.csv' table='[gene_ramp_percentages#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='Gene' ordinal='0' />
+                  <column datatype='real' name='Frequency' ordinal='1' />
+                  <column datatype='integer' name='Gene With Ramps' ordinal='2' />
+                  <column datatype='real' name='Expected Ramps' ordinal='3' />
+                  <column datatype='integer' name='Total Genes' ordinal='4' />
+                  <column datatype='real' name='Average Ramp Frequency' ordinal='5' />
+                  <column datatype='real' name='Chi-Square Test' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Highlight 1 (generated)' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source type='sheet' worksheet='Gene Ramp Percentages' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Measure Names' />
+        <param name='target' value='Gene Ramp Percentages' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Cell Ramp Percentages Multiple Bar Chart'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Cell Ramp Percentages </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cell_ramp_percentages' name='federated.0z6xidc0sg368g1b69h8d1ezzki1' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0z6xidc0sg368g1b69h8d1ezzki1'>
+            <column datatype='string' name='[Cell Type]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Expected Ramps]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Gene With Ramps]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Total Genes]' role='measure' type='quantitative' />
+            <column-instance column='[Cell Type]' derivation='None' name='[none:Cell Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Expected Ramps]' derivation='Sum' name='[sum:Expected Ramps:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Gene With Ramps]' derivation='Sum' name='[sum:Gene With Ramps:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Total Genes]' derivation='Sum' name='[sum:Total Genes:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0z6xidc0sg368g1b69h8d1ezzki1].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0z6xidc0sg368g1b69h8d1ezzki1].[sum:Expected Ramps:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0z6xidc0sg368g1b69h8d1ezzki1].[sum:Gene With Ramps:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0z6xidc0sg368g1b69h8d1ezzki1].[sum:Total Genes:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0z6xidc0sg368g1b69h8d1ezzki1].[none:Cell Type:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Cell Type:nk]' member='&quot;cells in tubules&quot;' />
+              <groupfilter function='member' level='[none:Cell Type:nk]' member='&quot;germinal center cells&quot;' />
+              <groupfilter function='member' level='[none:Cell Type:nk]' member='&quot;glandular cells&quot;' />
+              <groupfilter function='member' level='[none:Cell Type:nk]' member='&quot;Langerhans&quot;' />
+              <groupfilter function='member' level='[none:Cell Type:nk]' member='&quot;Leydig cells&quot;' />
+              <groupfilter function='member' level='[none:Cell Type:nk]' member='&quot;macrophages&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0z6xidc0sg368g1b69h8d1ezzki1].[none:Cell Type:nk]</column>
+            <column>[federated.0z6xidc0sg368g1b69h8d1ezzki1].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0z6xidc0sg368g1b69h8d1ezzki1].[Multiple Values]' scope='rows' value='true' />
+            <encoding attr='space' class='0' field='[federated.0z6xidc0sg368g1b69h8d1ezzki1].[Multiple Values]' field-type='quantitative' max='217848.75' min='0.0' range-type='fixed' scope='rows' type='space' />
+            <format attr='width' field='[federated.0z6xidc0sg368g1b69h8d1ezzki1].[Multiple Values]' value='96' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0z6xidc0sg368g1b69h8d1ezzki1].[:Measure Names]' value='62' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='height' field='[federated.0z6xidc0sg368g1b69h8d1ezzki1].[none:Cell Type:nk]' value='68' />
+            <format attr='height-header' value='36' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.0z6xidc0sg368g1b69h8d1ezzki1].[none:Cell Type:nk]' value='-90' />
+            <format attr='display' field='[federated.0z6xidc0sg368g1b69h8d1ezzki1].[:Measure Names]' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0z6xidc0sg368g1b69h8d1ezzki1].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='621' />
+                <format attr='maxheight' value='621' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0z6xidc0sg368g1b69h8d1ezzki1].[Multiple Values]</rows>
+        <cols>([federated.0z6xidc0sg368g1b69h8d1ezzki1].[none:Cell Type:nk] / [federated.0z6xidc0sg368g1b69h8d1ezzki1].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{34450F69-FC24-4836-A337-6D6A3539FCD6}' />
+    </worksheet>
+    <worksheet name='Gene Ramp Percentages'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='gene_ramp_percentages' name='federated.1cjcwlx14wj0fa143r5441m8vhp1' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1cjcwlx14wj0fa143r5441m8vhp1'>
+            <column datatype='real' name='[Expected Ramps]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Gene With Ramps]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Gene]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Total Genes]' role='measure' type='quantitative' />
+            <column-instance column='[Gene]' derivation='None' name='[none:Gene:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Expected Ramps]' derivation='Sum' name='[sum:Expected Ramps:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Gene With Ramps]' derivation='Sum' name='[sum:Gene With Ramps:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Total Genes]' derivation='Sum' name='[sum:Total Genes:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1cjcwlx14wj0fa143r5441m8vhp1].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1cjcwlx14wj0fa143r5441m8vhp1].[sum:Expected Ramps:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1cjcwlx14wj0fa143r5441m8vhp1].[sum:Gene With Ramps:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1cjcwlx14wj0fa143r5441m8vhp1].[sum:Total Genes:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1cjcwlx14wj0fa143r5441m8vhp1].[none:Gene:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Gene:nk]' member='&quot;ACOT4&quot;' />
+              <groupfilter function='member' level='[none:Gene:nk]' member='&quot;ACTR5&quot;' />
+              <groupfilter function='member' level='[none:Gene:nk]' member='&quot;ADGRF1&quot;' />
+              <groupfilter function='member' level='[none:Gene:nk]' member='&quot;AP1S3&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1cjcwlx14wj0fa143r5441m8vhp1].[none:Gene:nk]</column>
+            <column>[federated.1cjcwlx14wj0fa143r5441m8vhp1].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1cjcwlx14wj0fa143r5441m8vhp1].[:Measure Names]' value='100' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.1cjcwlx14wj0fa143r5441m8vhp1].[:Measure Names]' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1cjcwlx14wj0fa143r5441m8vhp1].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minheight' value='725' />
+                <format attr='maxheight' value='725' />
+                <format attr='minwidth' value='300' />
+                <format attr='maxwidth' value='300' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1cjcwlx14wj0fa143r5441m8vhp1].[Multiple Values]</rows>
+        <cols>([federated.1cjcwlx14wj0fa143r5441m8vhp1].[none:Gene:nk] / [federated.1cjcwlx14wj0fa143r5441m8vhp1].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{4E2C46CB-76C3-40BB-A7C4-62F94B4ECA4C}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='63'>
+    <window class='worksheet' name='Cell Ramp Percentages Multiple Bar Chart'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.0z6xidc0sg368g1b69h8d1ezzki1].[none:Cell Type:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0z6xidc0sg368g1b69h8d1ezzki1].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0z6xidc0sg368g1b69h8d1ezzki1].[:Measure Names]</field>
+            <field>[federated.0z6xidc0sg368g1b69h8d1ezzki1].[none:Cell Type:nk]</field>
+          </color-one-way>
+        </highlight>
+        <floating-toolbar-visibility value='1' />
+      </viewpoint>
+      <simple-id uuid='{93B620D0-2907-4622-8EA1-D12E85C178EE}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Gene Ramp Percentages'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.1cjcwlx14wj0fa143r5441m8vhp1].[none:Gene:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1cjcwlx14wj0fa143r5441m8vhp1].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1cjcwlx14wj0fa143r5441m8vhp1].[none:Gene:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{CEADE126-9B33-4201-B393-EBF7C0EFE203}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Cell Ramp Percentages Multiple Bar Chart' width='192'>
+      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
+      YII=
+    </thumbnail>
+    <thumbnail height='192' name='Gene Ramp Percentages' width='192'>
+      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
+      QmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
