@@ -82,7 +82,7 @@ using ExtRamp;
             WriteLiteral("\r\n<!DOCTYPE html>\r\n<html>\r\n");
             EndContext();
             BeginContext(172, 4668, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a507a06b4a4c452d95db868f0b6e0e9b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1ee410f03f1048ff936e5473bcdd35d9", async() => {
                 BeginContext(178, 1461, true);
                 WriteLiteral(@"
     <script src=""https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.js""></script>
@@ -275,7 +275,7 @@ using ExtRamp;
             WriteLiteral("\r\n<!-- a change -->\r\n");
             EndContext();
             BeginContext(4861, 130388, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e051254977aa495a84b07ee3373bb837", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fb4d149b571442e68e5ecf76369b4bda", async() => {
                 BeginContext(4867, 2333, true);
                 WriteLiteral(@"
 
@@ -324,7 +324,7 @@ using ExtRamp;
             ");
                 EndContext();
                 BeginContext(7200, 19857, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "69b6cf301b804d90b3c784cb215b750d", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "708389f003774484b160f7fdbc995ba5", async() => {
                     BeginContext(7277, 4307, true);
                     WriteLiteral(@"
 
@@ -375,7 +375,7 @@ using ExtRamp;
                     WriteLiteral("hoose a dataset from which you want to use tissue-specific RSCU values to extract ramp sequences\">Dataset: </label>\r\n                    <select id=\"TissueDataset\" name=\"TissueDataset\">\r\n                        ");
                     EndContext();
                     BeginContext(11584, 55, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5e86ef1980cc4bbbbd15023c3100ab7b", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d337c00affe14eb4a35e014e7a5fb981", async() => {
                         BeginContext(11626, 4, true);
                         WriteLiteral("None");
                         EndContext();
@@ -398,7 +398,7 @@ using ExtRamp;
                     WriteLiteral("\r\n                        ");
                     EndContext();
                     BeginContext(11665, 65, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c91bb55fcf564c47bb8f3e6f4aa6759d", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f58cf1d4da024d6d850869844c65ca06", async() => {
                         BeginContext(11712, 9, true);
                         WriteLiteral("Consensus");
                         EndContext();
@@ -421,7 +421,7 @@ using ExtRamp;
                     WriteLiteral("\r\n                        ");
                     EndContext();
                     BeginContext(11756, 59, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7bd82479451f4c1f95488766792f8d04", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8bce3b038eae4e049497f7d453bdd8b3", async() => {
                         BeginContext(11800, 6, true);
                         WriteLiteral("Fantom");
                         EndContext();
@@ -444,7 +444,7 @@ using ExtRamp;
                     WriteLiteral("\r\n                        ");
                     EndContext();
                     BeginContext(11841, 75, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f88b9f6df3154a2c9052371c3926fd6d", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "53150aae7db44b209759825b2d87db6d", async() => {
                         BeginContext(11882, 25, true);
                         WriteLiteral("Human Protein Atlas (HPA)");
                         EndContext();
@@ -467,7 +467,7 @@ using ExtRamp;
                     WriteLiteral("\r\n                        ");
                     EndContext();
                     BeginContext(11942, 55, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ae5a77ef07f341159dea07f82178e2f3", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fabdc6690b464b7baee7e2a0e92600d0", async() => {
                         BeginContext(11984, 4, true);
                         WriteLiteral("GTEx");
                         EndContext();
@@ -490,7 +490,7 @@ using ExtRamp;
                     WriteLiteral("\r\n                        ");
                     EndContext();
                     BeginContext(12023, 66, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dcaccaa5d966419c974f844d81051db2", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0f874f44ef624e5b999671eb8de3b478", async() => {
                         BeginContext(12066, 14, true);
                         WriteLiteral("HPA Cell Types");
                         EndContext();
@@ -517,7 +517,7 @@ using ExtRamp;
                     ");
                     EndContext();
                     BeginContext(12423, 156, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "05f431fdcf584aa1b609f1a287ba7d6a", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "694bb17f7d074a92b3352ae752d5e12c", async() => {
                     }
                     );
                     __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.SelectTagHelper>();
@@ -545,7 +545,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper.Items = Model.ConsensusTis
                     WriteLiteral("\r\n                    ");
                     EndContext();
                     BeginContext(12601, 147, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "387686b0183f48e389ee60c5541a2409", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "91c857ea1fee4718b18c64fb202d2847", async() => {
                     }
                     );
                     __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.SelectTagHelper>();
@@ -573,7 +573,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper.Items = Model.FantomTissue
                     WriteLiteral("\r\n                    ");
                     EndContext();
                     BeginContext(12770, 138, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4e9b8d540aff4cdc8b54c460dbe529af", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "31264f5456384ed3b2bd9b0387fa44ac", async() => {
                     }
                     );
                     __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.SelectTagHelper>();
@@ -601,7 +601,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper.Items = Model.HpaTissues;
                     WriteLiteral("\r\n                    ");
                     EndContext();
                     BeginContext(12930, 141, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cbfdd7b73f7e4c0c99bd65741e13c619", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "65aa6dd0e32642a5a79e88250eca4154", async() => {
                     }
                     );
                     __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.SelectTagHelper>();
@@ -629,7 +629,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper.Items = Model.GtexTissues;
                     WriteLiteral("\r\n                    ");
                     EndContext();
                     BeginContext(13093, 123, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1ae9842392a343bd990e6b3c60366a2a", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "252f9062add0467bb6ae40a1a807045c", async() => {
                     }
                     );
                     __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.SelectTagHelper>();
