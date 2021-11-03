@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\matthodg\\source\\repos\\ExtRampOnline\\ExtRamp_ASP.Net\\ExtRamp_ASP.Net\\ExtRamp\\ExtRamp\\ExtRamp.csproj": {}
+    "C:\\Users\\matthodg\\source\\repos\\rampAtlas\\ExtRampOnline\\ExtRamp\\ExtRamp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\matthodg\\source\\repos\\ExtRampOnline\\ExtRamp_ASP.Net\\ExtRamp_ASP.Net\\ExtRamp\\ExtRamp.core\\ExtRamp.core.csproj": {
+    "C:\\Users\\matthodg\\source\\repos\\rampAtlas\\ExtRampOnline\\ExtRamp.core\\ExtRamp.core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\matthodg\\source\\repos\\ExtRampOnline\\ExtRamp_ASP.Net\\ExtRamp_ASP.Net\\ExtRamp\\ExtRamp.core\\ExtRamp.core.csproj",
+        "projectUniqueName": "C:\\Users\\matthodg\\source\\repos\\rampAtlas\\ExtRampOnline\\ExtRamp.core\\ExtRamp.core.csproj",
         "projectName": "ExtRamp.core",
-        "projectPath": "C:\\Users\\matthodg\\source\\repos\\ExtRampOnline\\ExtRamp_ASP.Net\\ExtRamp_ASP.Net\\ExtRamp\\ExtRamp.core\\ExtRamp.core.csproj",
+        "projectPath": "C:\\Users\\matthodg\\source\\repos\\rampAtlas\\ExtRampOnline\\ExtRamp.core\\ExtRamp.core.csproj",
         "packagesPath": "C:\\Users\\matthodg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\matthodg\\source\\repos\\ExtRampOnline\\ExtRamp_ASP.Net\\ExtRamp_ASP.Net\\ExtRamp\\ExtRamp.core\\obj\\",
+        "outputPath": "C:\\Users\\matthodg\\source\\repos\\rampAtlas\\ExtRampOnline\\ExtRamp.core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\matthodg\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -59,14 +59,14 @@
         }
       }
     },
-    "C:\\Users\\matthodg\\source\\repos\\ExtRampOnline\\ExtRamp_ASP.Net\\ExtRamp_ASP.Net\\ExtRamp\\ExtRamp.data\\ExtRamp.data.csproj": {
+    "C:\\Users\\matthodg\\source\\repos\\rampAtlas\\ExtRampOnline\\ExtRamp.data\\ExtRamp.data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\matthodg\\source\\repos\\ExtRampOnline\\ExtRamp_ASP.Net\\ExtRamp_ASP.Net\\ExtRamp\\ExtRamp.data\\ExtRamp.data.csproj",
+        "projectUniqueName": "C:\\Users\\matthodg\\source\\repos\\rampAtlas\\ExtRampOnline\\ExtRamp.data\\ExtRamp.data.csproj",
         "projectName": "ExtRamp.data",
-        "projectPath": "C:\\Users\\matthodg\\source\\repos\\ExtRampOnline\\ExtRamp_ASP.Net\\ExtRamp_ASP.Net\\ExtRamp\\ExtRamp.data\\ExtRamp.data.csproj",
+        "projectPath": "C:\\Users\\matthodg\\source\\repos\\rampAtlas\\ExtRampOnline\\ExtRamp.data\\ExtRamp.data.csproj",
         "packagesPath": "C:\\Users\\matthodg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\matthodg\\source\\repos\\ExtRampOnline\\ExtRamp_ASP.Net\\ExtRamp_ASP.Net\\ExtRamp\\ExtRamp.data\\obj\\",
+        "outputPath": "C:\\Users\\matthodg\\source\\repos\\rampAtlas\\ExtRampOnline\\ExtRamp.data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\matthodg\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,8 +82,8 @@
         "frameworks": {
           "netcoreapp2.1": {
             "projectReferences": {
-              "C:\\Users\\matthodg\\source\\repos\\ExtRampOnline\\ExtRamp_ASP.Net\\ExtRamp_ASP.Net\\ExtRamp\\ExtRamp.core\\ExtRamp.core.csproj": {
-                "projectPath": "C:\\Users\\matthodg\\source\\repos\\ExtRampOnline\\ExtRamp_ASP.Net\\ExtRamp_ASP.Net\\ExtRamp\\ExtRamp.core\\ExtRamp.core.csproj"
+              "C:\\Users\\matthodg\\source\\repos\\rampAtlas\\ExtRampOnline\\ExtRamp.core\\ExtRamp.core.csproj": {
+                "projectPath": "C:\\Users\\matthodg\\source\\repos\\rampAtlas\\ExtRampOnline\\ExtRamp.core\\ExtRamp.core.csproj"
               }
             }
           }
@@ -118,14 +118,14 @@
         }
       }
     },
-    "C:\\Users\\matthodg\\source\\repos\\ExtRampOnline\\ExtRamp_ASP.Net\\ExtRamp_ASP.Net\\ExtRamp\\ExtRamp\\ExtRamp.csproj": {
+    "C:\\Users\\matthodg\\source\\repos\\rampAtlas\\ExtRampOnline\\ExtRamp\\ExtRamp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\matthodg\\source\\repos\\ExtRampOnline\\ExtRamp_ASP.Net\\ExtRamp_ASP.Net\\ExtRamp\\ExtRamp\\ExtRamp.csproj",
+        "projectUniqueName": "C:\\Users\\matthodg\\source\\repos\\rampAtlas\\ExtRampOnline\\ExtRamp\\ExtRamp.csproj",
         "projectName": "ExtRamp",
-        "projectPath": "C:\\Users\\matthodg\\source\\repos\\ExtRampOnline\\ExtRamp_ASP.Net\\ExtRamp_ASP.Net\\ExtRamp\\ExtRamp\\ExtRamp.csproj",
+        "projectPath": "C:\\Users\\matthodg\\source\\repos\\rampAtlas\\ExtRampOnline\\ExtRamp\\ExtRamp.csproj",
         "packagesPath": "C:\\Users\\matthodg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\matthodg\\source\\repos\\ExtRampOnline\\ExtRamp_ASP.Net\\ExtRamp_ASP.Net\\ExtRamp\\ExtRamp\\obj\\",
+        "outputPath": "C:\\Users\\matthodg\\source\\repos\\rampAtlas\\ExtRampOnline\\ExtRamp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\matthodg\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -141,11 +141,11 @@
         "frameworks": {
           "netcoreapp2.1": {
             "projectReferences": {
-              "C:\\Users\\matthodg\\source\\repos\\ExtRampOnline\\ExtRamp_ASP.Net\\ExtRamp_ASP.Net\\ExtRamp\\ExtRamp.core\\ExtRamp.core.csproj": {
-                "projectPath": "C:\\Users\\matthodg\\source\\repos\\ExtRampOnline\\ExtRamp_ASP.Net\\ExtRamp_ASP.Net\\ExtRamp\\ExtRamp.core\\ExtRamp.core.csproj"
+              "C:\\Users\\matthodg\\source\\repos\\rampAtlas\\ExtRampOnline\\ExtRamp.core\\ExtRamp.core.csproj": {
+                "projectPath": "C:\\Users\\matthodg\\source\\repos\\rampAtlas\\ExtRampOnline\\ExtRamp.core\\ExtRamp.core.csproj"
               },
-              "C:\\Users\\matthodg\\source\\repos\\ExtRampOnline\\ExtRamp_ASP.Net\\ExtRamp_ASP.Net\\ExtRamp\\ExtRamp.data\\ExtRamp.data.csproj": {
-                "projectPath": "C:\\Users\\matthodg\\source\\repos\\ExtRampOnline\\ExtRamp_ASP.Net\\ExtRamp_ASP.Net\\ExtRamp\\ExtRamp.data\\ExtRamp.data.csproj"
+              "C:\\Users\\matthodg\\source\\repos\\rampAtlas\\ExtRampOnline\\ExtRamp.data\\ExtRamp.data.csproj": {
+                "projectPath": "C:\\Users\\matthodg\\source\\repos\\rampAtlas\\ExtRampOnline\\ExtRamp.data\\ExtRamp.data.csproj"
               }
             }
           }

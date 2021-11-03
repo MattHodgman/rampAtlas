@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uNkytMe8a55LgVbpwJEsyvLR7B64zTsJYq7XDXLzoBSlRrUMAW03gGO4ET6SchiWDWs/+rftWPFqGQKJdYeJ6A==",
+  "dgSpecHash": "sav0w53eyIyKjx/kI5/UDyME4kHuHxlIbJlBitc8qzYqkK663Q+DVPWqjOQPnaeR1HYy8bVCmzcYjWNK2dptKg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\matthodg\\source\\repos\\ExtRampOnline\\ExtRamp_ASP.Net\\ExtRamp_ASP.Net\\ExtRamp\\ExtRamp\\ExtRamp.csproj",
+  "projectFilePath": "C:\\Users\\matthodg\\source\\repos\\rampAtlas\\ExtRampOnline\\ExtRamp\\ExtRamp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\matthodg\\.nuget\\packages\\dotnetzip\\1.13.8\\dotnetzip.1.13.8.nupkg.sha512",
     "C:\\Users\\matthodg\\.nuget\\packages\\json.net\\1.0.16\\json.net.1.0.16.nupkg.sha512",

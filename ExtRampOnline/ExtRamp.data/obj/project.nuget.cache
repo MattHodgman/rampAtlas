@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AccPDTeBh4a24iUdp+P1TlV9JKTX23Jto5cUm9h8dqwM9GCfNiU/yw072VpvTzXQwnPd7aIvP7UVPtcL2LcfdQ==",
+  "dgSpecHash": "mLwom8H2t+xB/QAYfLrxW7zRB1ldfxfSGYMvWbhCxZGgJpVo1PqkiB58WvEpCz2FPl99jXeNu7d3kX+LR0GS7w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\matthodg\\source\\repos\\ExtRampOnline\\ExtRamp_ASP.Net\\ExtRamp_ASP.Net\\ExtRamp\\ExtRamp.data\\ExtRamp.data.csproj",
+  "projectFilePath": "C:\\Users\\matthodg\\source\\repos\\rampAtlas\\ExtRampOnline\\ExtRamp.data\\ExtRamp.data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\matthodg\\.nuget\\packages\\microsoft.netcore.app\\2.1.0\\microsoft.netcore.app.2.1.0.nupkg.sha512",
     "C:\\Users\\matthodg\\.nuget\\packages\\microsoft.netcore.dotnetapphost\\2.1.0\\microsoft.netcore.dotnetapphost.2.1.0.nupkg.sha512",
