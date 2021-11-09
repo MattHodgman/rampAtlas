@@ -71,7 +71,7 @@ using ExtRamp;
             WriteLiteral("\r\n<!DOCTYPE html>\r\n<html lang=\"en\">\r\n");
             EndContext();
             BeginContext(103, 5781, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5efc791f020b43a9a243f3b097a0bcd5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "879447ae4aa2477086736d04ea9e2e27", async() => {
                 BeginContext(109, 3870, true);
                 WriteLiteral(@"
     <meta name=""description"" content=""the Ramp Atlas to run ExtRamp Online to identify ramp sequences in tissues and cell types.""/>
@@ -324,7 +324,7 @@ using ExtRamp;
             WriteLiteral("\r\n\r\n\r\n\r\n");
             EndContext();
             BeginContext(5892, 12416, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "17a44d71a9ea46099a5c4f5752b04dbb", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e743181df22c46f993aee2fdd290334c", async() => {
                 BeginContext(5898, 697, true);
                 WriteLiteral(@"
 
@@ -342,7 +342,7 @@ using ExtRamp;
                     ");
                 EndContext();
                 BeginContext(6595, 137, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "5873a226f9614803a0444b033e54221b", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "da5166c6ca974d5ca73e28749af9195e", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -363,7 +363,7 @@ using ExtRamp;
                 WriteLiteral("\r\n                    <div class=\"carousel-caption\" role=\"option\">\r\n                        <p>\r\n                            <b>Welcome to the Ramp Atlas!</b>\r\n                        </p>\r\n                        ");
                 EndContext();
                 BeginContext(6946, 159, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "33fd1c57a8564f30a43c4c4631b292f4", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c9aed9c096e7474fa49256cb38b87c09", async() => {
                     BeginContext(7034, 67, true);
                     WriteLiteral("\r\n                            Get Started\r\n                        ");
                     EndContext();
@@ -387,7 +387,7 @@ using ExtRamp;
                 WriteLiteral("\r\n                    </div>\r\n                </div>\r\n                <div class=\"item\">\r\n                    ");
                 EndContext();
                 BeginContext(7215, 144, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "eef5bbbae11448e3ac08792e0664e979", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "58bd25b5aca848fba675673382facd82", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -408,7 +408,7 @@ using ExtRamp;
                 WriteLiteral("\r\n                    <div class=\"carousel-caption\" role=\"option\">\r\n                        <p>\r\n                            <b>Ramp sequences may contribute to SARS-CoV-2 infection</b>\r\n                        </p>\r\n                        ");
                 EndContext();
                 BeginContext(7600, 156, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4b303b255c05427abe0d762b3cc7ce7d", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e829e86fbeb241a9901da950f8ed685c", async() => {
                     BeginContext(7686, 66, true);
                     WriteLiteral("\r\n                            Learn More\r\n                        ");
                     EndContext();
@@ -432,7 +432,7 @@ using ExtRamp;
                 WriteLiteral("\r\n                    </div>\r\n                </div>\r\n                <div class=\"item\">\r\n                    ");
                 EndContext();
                 BeginContext(7866, 149, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "64f9eb866e1345c090902fa29481a902", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ea4deafd4b964d88882e883f18eea492", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -464,7 +464,7 @@ using ExtRamp;
                     ");
                 EndContext();
                 BeginContext(8571, 142, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "6bee50ae4b164873b91c398514991243", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "d176516f4674439d9843dd4f4d45def5", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -601,7 +601,7 @@ using ExtRamp;
             ");
                 EndContext();
                 BeginContext(15381, 36, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "f25159e8e287476990b2ef10e66a3a9b", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "77eba79877714657bbe68b66e3eb466b", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
