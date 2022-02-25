@@ -60,4 +60,10 @@ output: CSV of "Tissue/Cell-type 1, Tissue/Cell-type 2, z-statistic, p-value"
   
 *ZTestSummary.py*  
 input: output of geneAndRampTotal.py; number of tissue/cell-type pairs (number of tissues-1 FANTOM5=44, GTEx=33, HPA=42, consensus=61, cell=65); output of pairwiseZtest.py  
-output: CSV of "Tissue, Total genes, Total ramps, Significant pairs, Percent significant pairs"  
+output: CSV of "Tissue, Total genes, Total ramps, Significant pairs, Percent significant pairs"
+
+
+### **Normality Test**
+*normality_test.py*
+input: output of *rampCountByExpressionAndTissues.py*
+output: CSVs of shapiro-wilk tests and histograms of the distribution of genes across tissues/cell types for different expression bins
