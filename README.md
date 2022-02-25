@@ -64,6 +64,6 @@ output: CSV of "Tissue, Total genes, Total ramps, Significant pairs, Percent sig
 
 
 ### **Normality Test**
-*normality_test.py*. 
+*normality_test.py*  
 input: output of *rampCountByExpressionAndTissues.py*
 output: CSVs of shapiro-wilk tests and histograms of the distribution of genes across tissues/cell types for different expression bins
