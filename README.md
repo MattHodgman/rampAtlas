@@ -65,5 +65,10 @@ output: CSV of "Tissue, Total genes, Total ramps, Significant pairs, Percent sig
 
 ### **Normality Test**
 *normality_test.py*  
-input: output of *rampCountByExpressionAndTissues.py*
+input: output of *rampCountByExpressionAndTissues.py*  
 output: CSVs of shapiro-wilk tests and histograms of the distribution of genes across tissues/cell types for different expression bins
+
+### **Cramer's V**
+*cramers_v.py*  
+input: output of *rampCountByExpressionAndTissues.py*  
+output: the same CSV as input except with an extra column that has the Cramer's V value
