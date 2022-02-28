@@ -1,7 +1,7 @@
 # Histograms
 These plots were generated using the *normality_test.py* script.
 
-## The results of the corresponding Shapiro-Wilk tests for the Consensus dataset:
+The results of the corresponding Shapiro-Wilk tests for the Consensus dataset:
 
 | Expression, Ramp Bin | Statistic (W) | Significance (P) |
 | -------------------- | ------------- | ---------------- |
